@@ -29,7 +29,7 @@ INSERT INTO Employes VALUES(10,'Bourssio','Xavios',100000,1,'100');
 INSERT INTO Employes VALUES(11,'The Butcher','Mélios',70000,2,'100');
 /-- Departement 200
 INSERT INTO Employes VALUES(12,'Baccon','Fredéric',45000,5,'200');
-INSERT INTO Employes VALUES(13,'Hibou','Paul',78000,4,'200');
+INSERT INTO Employes VALUES(13,'','',78000,4,'200');
 /-- Departement 300
 INSERT INTO Employes VALUES(14,'LeMayor','Roux', 25000,6,'300');
 INSERT INTO Employes VALUES(15,'KohPer','Shoun',65000,7,'300');
