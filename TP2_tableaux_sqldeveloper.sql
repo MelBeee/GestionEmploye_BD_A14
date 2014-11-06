@@ -25,17 +25,17 @@ INSERT INTO Departements VALUES('400', 'Administation');
 INSERT INTO Departements VALUES('500', 'Comptabilité');
 
 /-- Departement 100
-INSERT INTO Employes VALUES();
-INSERT INTO Employes VALUES();
+INSERT INTO Employes VALUES(10,'Bourssio','Xavios',100000,1,'100');
+INSERT INTO Employes VALUES(11,'The Butcher','Mélios',70000,2,'100');
 /-- Departement 200
-INSERT INTO Employes VALUES();
-INSERT INTO Employes VALUES();
+INSERT INTO Employes VALUES(12,'Baccon','Fredéric',45000,5,'200');
+INSERT INTO Employes VALUES(13,'Hibou','Paul',78000,4,'200');
 /-- Departement 300
-INSERT INTO Employes VALUES();
-INSERT INTO Employes VALUES();
+INSERT INTO Employes VALUES(14,'LeMayor','Roux', 25000,6,'300');
+INSERT INTO Employes VALUES(15,'KohPer','Shoun',65000,7,'300');
 /-- Departement 400
-INSERT INTO Employes VALUES();
-INSERT INTO Employes VALUES();
+INSERT INTO Employes VALUES(16,'Deloin','Manuwel',98000,8,'400');
+INSERT INTO Employes VALUES(17,'Syvestio','Davyd', 25000,9,'400');
 /-- Departement 500
-INSERT INTO Employes VALUES();
-INSERT INTO Employes VALUES();
+INSERT INTO Employes VALUES(18,'Clémentine','Dominique',100000,3,'500');
+INSERT INTO Employes VALUES(19,'Enfant','Alexiss',50000,10,'500');
