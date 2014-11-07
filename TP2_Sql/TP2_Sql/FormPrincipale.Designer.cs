@@ -33,9 +33,11 @@
             this.btn_Modifier = new System.Windows.Forms.Button();
             this.btn_Rechercher = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tb_ModSup = new System.Windows.Forms.TextBox();
+            this.TB_ModSup = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.LB_Connection = new System.Windows.Forms.Label();
+            this.BTN_Suivant = new System.Windows.Forms.Button();
+            this.BTN_Precedant = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,7 +73,7 @@
             // 
             // btn_Rechercher
             // 
-            this.btn_Rechercher.Location = new System.Drawing.Point(467, 358);
+            this.btn_Rechercher.Location = new System.Drawing.Point(84, 249);
             this.btn_Rechercher.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Rechercher.Name = "btn_Rechercher";
             this.btn_Rechercher.Size = new System.Drawing.Size(74, 27);
@@ -92,13 +94,13 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // tb_ModSup
+            // TB_ModSup
             // 
-            this.tb_ModSup.Location = new System.Drawing.Point(36, 199);
-            this.tb_ModSup.Margin = new System.Windows.Forms.Padding(2);
-            this.tb_ModSup.Name = "tb_ModSup";
-            this.tb_ModSup.Size = new System.Drawing.Size(76, 20);
-            this.tb_ModSup.TabIndex = 8;
+            this.TB_ModSup.Location = new System.Drawing.Point(36, 199);
+            this.TB_ModSup.Margin = new System.Windows.Forms.Padding(2);
+            this.TB_ModSup.Name = "TB_ModSup";
+            this.TB_ModSup.Size = new System.Drawing.Size(76, 20);
+            this.TB_ModSup.TabIndex = 8;
             // 
             // label1
             // 
@@ -119,15 +121,35 @@
             this.LB_Connection.TabIndex = 10;
             this.LB_Connection.Text = "Closed";
             // 
+            // BTN_Suivant
+            // 
+            this.BTN_Suivant.Location = new System.Drawing.Point(342, 287);
+            this.BTN_Suivant.Name = "BTN_Suivant";
+            this.BTN_Suivant.Size = new System.Drawing.Size(75, 23);
+            this.BTN_Suivant.TabIndex = 12;
+            this.BTN_Suivant.Text = "Suivant";
+            this.BTN_Suivant.UseVisualStyleBackColor = true;
+            // 
+            // BTN_Precedant
+            // 
+            this.BTN_Precedant.Location = new System.Drawing.Point(261, 287);
+            this.BTN_Precedant.Name = "BTN_Precedant";
+            this.BTN_Precedant.Size = new System.Drawing.Size(75, 23);
+            this.BTN_Precedant.TabIndex = 11;
+            this.BTN_Precedant.Text = "Précédant";
+            this.BTN_Precedant.UseVisualStyleBackColor = true;
+            // 
             // FormPrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(237)))), ((int)(((byte)(137)))));
-            this.ClientSize = new System.Drawing.Size(628, 505);
+            this.ClientSize = new System.Drawing.Size(429, 322);
+            this.Controls.Add(this.BTN_Precedant);
+            this.Controls.Add(this.BTN_Suivant);
             this.Controls.Add(this.LB_Connection);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tb_ModSup);
+            this.Controls.Add(this.TB_ModSup);
             this.Controls.Add(this.btn_Rechercher);
             this.Controls.Add(this.btn_Modifier);
             this.Controls.Add(this.btn_Supprimer);
@@ -152,8 +174,10 @@
         private System.Windows.Forms.Button btn_Supprimer;
         private System.Windows.Forms.Button btn_Modifier;
         private System.Windows.Forms.Button btn_Rechercher;
-        private System.Windows.Forms.TextBox tb_ModSup;
+        private System.Windows.Forms.TextBox TB_ModSup;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label LB_Connection;
+        private System.Windows.Forms.Button BTN_Suivant;
+        private System.Windows.Forms.Button BTN_Precedant;
     }
 }

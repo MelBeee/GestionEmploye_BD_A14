@@ -29,6 +29,7 @@ namespace TP2_Sql
                 btn_Modifier.Enabled = false;
                 btn_Rechercher.Enabled = false;
                 btn_Supprimer.Enabled = false;
+                TB_ModSup.Enabled = false;
             }
             else
             {
@@ -36,6 +37,7 @@ namespace TP2_Sql
                 btn_Modifier.Enabled = true;
                 btn_Rechercher.Enabled = true;
                 btn_Supprimer.Enabled = true;
+                TB_ModSup.Enabled = true;
             }
         }
 
