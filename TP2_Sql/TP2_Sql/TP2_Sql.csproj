@@ -44,11 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AjouterModifierEmploye.cs">
+    <Compile Include="AjouterModifier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AjouterModifierEmploye.Designer.cs">
-      <DependentUpon>AjouterModifierEmploye.cs</DependentUpon>
+    <Compile Include="AjouterModifier.Designer.cs">
+      <DependentUpon>AjouterModifier.cs</DependentUpon>
     </Compile>
     <Compile Include="Connexion.cs">
       <SubType>Form</SubType>
@@ -56,13 +56,22 @@
     <Compile Include="Connexion.Designer.cs">
       <DependentUpon>Connexion.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPrincipale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrincipale.Designer.cs">
+      <DependentUpon>FormPrincipale.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AjouterModifierEmploye.resx">
-      <DependentUpon>AjouterModifierEmploye.cs</DependentUpon>
+    <EmbeddedResource Include="AjouterModifier.resx">
+      <DependentUpon>AjouterModifier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Connexion.resx">
       <DependentUpon>Connexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrincipale.resx">
+      <DependentUpon>FormPrincipale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

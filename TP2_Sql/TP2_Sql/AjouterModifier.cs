@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TP2_Sql
 {
-    public partial class Connexion : Form
+    public partial class AjouterModifier : Form
     {
-        public Connexion()
+        public AjouterModifier()
         {
             InitializeComponent();
         }

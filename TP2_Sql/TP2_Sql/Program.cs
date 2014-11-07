@@ -16,7 +16,7 @@ namespace TP2_Sql
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Connexion());
+            Application.Run(new FormPrincipale());
         }
     }
 }

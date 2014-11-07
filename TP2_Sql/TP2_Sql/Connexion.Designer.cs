@@ -44,7 +44,6 @@
             this.btn_Connexion.TabIndex = 0;
             this.btn_Connexion.Text = "Connexion";
             this.btn_Connexion.UseVisualStyleBackColor = true;
-            this.btn_Connexion.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_Annuler
             // 
@@ -54,7 +53,6 @@
             this.btn_Annuler.TabIndex = 1;
             this.btn_Annuler.Text = "Annuler";
             this.btn_Annuler.UseVisualStyleBackColor = true;
-            this.btn_Annuler.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 

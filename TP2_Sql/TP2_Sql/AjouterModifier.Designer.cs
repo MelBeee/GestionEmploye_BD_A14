@@ -1,6 +1,6 @@
 ﻿namespace TP2_Sql
 {
-    partial class AjouterModifierEmploye
+    partial class AjouterModifier
     {
         /// <summary>
         /// Required designer variable.
@@ -53,7 +53,6 @@
             this.btn_Enregistrer.TabIndex = 0;
             this.btn_Enregistrer.Text = "Enregistrer";
             this.btn_Enregistrer.UseVisualStyleBackColor = true;
-            this.btn_Enregistrer.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_Annuler
             // 
@@ -64,7 +63,6 @@
             this.btn_Annuler.TabIndex = 1;
             this.btn_Annuler.Text = "Annuler";
             this.btn_Annuler.UseVisualStyleBackColor = true;
-            this.btn_Annuler.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -161,9 +159,8 @@
             this.label6.Size = new System.Drawing.Size(90, 17);
             this.label6.TabIndex = 12;
             this.label6.Text = "Département";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // AjouterModifierEmploye
+            // AjouterModifier
             // 
             this.AcceptButton = this.btn_Enregistrer;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -186,9 +183,8 @@
             this.Controls.Add(this.btn_Annuler);
             this.Controls.Add(this.btn_Enregistrer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "AjouterModifierEmploye";
-            this.Text = "AjouterModifierEmploye";
-            this.Load += new System.EventHandler(this.AjouterModifierEmploye_Load);
+            this.Name = "AjouterModifier";
+            this.Text = "AjouterModifier";
             this.ResumeLayout(false);
             this.PerformLayout();
 
