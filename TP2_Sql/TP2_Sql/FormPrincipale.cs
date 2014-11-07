@@ -66,5 +66,10 @@ namespace TP2_Sql
             }
 
         }
+
+        private void FormPrincipale_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            oraconn.Close();
+        }
     }
 }

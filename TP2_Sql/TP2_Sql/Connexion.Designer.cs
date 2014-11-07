@@ -40,7 +40,7 @@
             // 
             this.btn_Connexion.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_Connexion.Location = new System.Drawing.Point(33, 89);
-            this.btn_Connexion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Connexion.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Connexion.Name = "btn_Connexion";
             this.btn_Connexion.Size = new System.Drawing.Size(70, 28);
             this.btn_Connexion.TabIndex = 0;
@@ -52,7 +52,7 @@
             // 
             this.btn_Annuler.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_Annuler.Location = new System.Drawing.Point(114, 89);
-            this.btn_Annuler.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Annuler.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Annuler.Name = "btn_Annuler";
             this.btn_Annuler.Size = new System.Drawing.Size(70, 28);
             this.btn_Annuler.TabIndex = 1;
@@ -82,7 +82,7 @@
             // tb_Username
             // 
             this.tb_Username.Location = new System.Drawing.Point(90, 22);
-            this.tb_Username.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_Username.Margin = new System.Windows.Forms.Padding(2);
             this.tb_Username.Name = "tb_Username";
             this.tb_Username.Size = new System.Drawing.Size(96, 20);
             this.tb_Username.TabIndex = 4;
@@ -90,8 +90,9 @@
             // tb_Password
             // 
             this.tb_Password.Location = new System.Drawing.Point(90, 50);
-            this.tb_Password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_Password.Margin = new System.Windows.Forms.Padding(2);
             this.tb_Password.Name = "tb_Password";
+            this.tb_Password.PasswordChar = '●';
             this.tb_Password.Size = new System.Drawing.Size(96, 20);
             this.tb_Password.TabIndex = 5;
             // 

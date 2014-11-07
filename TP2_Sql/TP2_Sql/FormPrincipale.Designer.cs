@@ -137,6 +137,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormPrincipale";
             this.Text = "FormPrincipale";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPrincipale_FormClosing);
             this.Load += new System.EventHandler(this.FormPrincipale_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
