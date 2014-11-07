@@ -38,18 +38,23 @@
             // 
             // btn_Connexion
             // 
-            this.btn_Connexion.Location = new System.Drawing.Point(44, 110);
+            this.btn_Connexion.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btn_Connexion.Location = new System.Drawing.Point(33, 89);
+            this.btn_Connexion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Connexion.Name = "btn_Connexion";
-            this.btn_Connexion.Size = new System.Drawing.Size(94, 35);
+            this.btn_Connexion.Size = new System.Drawing.Size(70, 28);
             this.btn_Connexion.TabIndex = 0;
             this.btn_Connexion.Text = "Connexion";
             this.btn_Connexion.UseVisualStyleBackColor = true;
+            this.btn_Connexion.Click += new System.EventHandler(this.btn_Connexion_Click);
             // 
             // btn_Annuler
             // 
-            this.btn_Annuler.Location = new System.Drawing.Point(152, 110);
+            this.btn_Annuler.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btn_Annuler.Location = new System.Drawing.Point(114, 89);
+            this.btn_Annuler.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Annuler.Name = "btn_Annuler";
-            this.btn_Annuler.Size = new System.Drawing.Size(94, 35);
+            this.btn_Annuler.Size = new System.Drawing.Size(70, 28);
             this.btn_Annuler.TabIndex = 1;
             this.btn_Annuler.Text = "Annuler";
             this.btn_Annuler.UseVisualStyleBackColor = true;
@@ -57,41 +62,47 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(41, 65);
+            this.label1.Location = new System.Drawing.Point(31, 53);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 17);
+            this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Password";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(41, 30);
+            this.label2.Location = new System.Drawing.Point(31, 24);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 17);
+            this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Username";
             // 
             // tb_Username
             // 
-            this.tb_Username.Location = new System.Drawing.Point(120, 27);
+            this.tb_Username.Location = new System.Drawing.Point(90, 22);
+            this.tb_Username.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tb_Username.Name = "tb_Username";
-            this.tb_Username.Size = new System.Drawing.Size(126, 22);
+            this.tb_Username.Size = new System.Drawing.Size(96, 20);
             this.tb_Username.TabIndex = 4;
             // 
             // tb_Password
             // 
-            this.tb_Password.Location = new System.Drawing.Point(120, 62);
+            this.tb_Password.Location = new System.Drawing.Point(90, 50);
+            this.tb_Password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tb_Password.Name = "tb_Password";
-            this.tb_Password.Size = new System.Drawing.Size(126, 22);
+            this.tb_Password.Size = new System.Drawing.Size(96, 20);
             this.tb_Password.TabIndex = 5;
             // 
-            // Connection
+            // Connexion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AcceptButton = this.btn_Connexion;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(237)))), ((int)(((byte)(137)))));
-            this.ClientSize = new System.Drawing.Size(295, 162);
+            this.CancelButton = this.btn_Annuler;
+            this.ClientSize = new System.Drawing.Size(221, 132);
             this.Controls.Add(this.tb_Password);
             this.Controls.Add(this.tb_Username);
             this.Controls.Add(this.label2);
@@ -99,9 +110,9 @@
             this.Controls.Add(this.btn_Annuler);
             this.Controls.Add(this.btn_Connexion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "Connection";
+            this.Name = "Connexion";
             this.Text = "Connexion";
+            this.Load += new System.EventHandler(this.Connexion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

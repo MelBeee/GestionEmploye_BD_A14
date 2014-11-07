@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_Connexion = new System.Windows.Forms.Button();
-            this.btn_Deconnexion = new System.Windows.Forms.Button();
             this.btn_Ajouter = new System.Windows.Forms.Button();
             this.btn_Supprimer = new System.Windows.Forms.Button();
             this.btn_Modifier = new System.Windows.Forms.Button();
@@ -37,96 +35,97 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tb_ModSup = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.LB_Connection = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_Connexion
-            // 
-            this.btn_Connexion.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btn_Connexion.Location = new System.Drawing.Point(71, 19);
-            this.btn_Connexion.Name = "btn_Connexion";
-            this.btn_Connexion.Size = new System.Drawing.Size(99, 33);
-            this.btn_Connexion.TabIndex = 0;
-            this.btn_Connexion.Text = "Connexion";
-            this.btn_Connexion.UseVisualStyleBackColor = true;
-            // 
-            // btn_Deconnexion
-            // 
-            this.btn_Deconnexion.Location = new System.Drawing.Point(176, 19);
-            this.btn_Deconnexion.Name = "btn_Deconnexion";
-            this.btn_Deconnexion.Size = new System.Drawing.Size(99, 33);
-            this.btn_Deconnexion.TabIndex = 1;
-            this.btn_Deconnexion.Text = "Deconnexion";
-            this.btn_Deconnexion.UseVisualStyleBackColor = true;
-            // 
             // btn_Ajouter
             // 
-            this.btn_Ajouter.Location = new System.Drawing.Point(71, 160);
+            this.btn_Ajouter.Location = new System.Drawing.Point(53, 130);
+            this.btn_Ajouter.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Ajouter.Name = "btn_Ajouter";
-            this.btn_Ajouter.Size = new System.Drawing.Size(154, 33);
+            this.btn_Ajouter.Size = new System.Drawing.Size(116, 27);
             this.btn_Ajouter.TabIndex = 3;
             this.btn_Ajouter.Text = "Ajouter un employé";
             this.btn_Ajouter.UseVisualStyleBackColor = true;
             // 
             // btn_Supprimer
             // 
-            this.btn_Supprimer.Location = new System.Drawing.Point(171, 247);
+            this.btn_Supprimer.Location = new System.Drawing.Point(128, 201);
+            this.btn_Supprimer.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Supprimer.Name = "btn_Supprimer";
-            this.btn_Supprimer.Size = new System.Drawing.Size(99, 33);
+            this.btn_Supprimer.Size = new System.Drawing.Size(74, 27);
             this.btn_Supprimer.TabIndex = 4;
             this.btn_Supprimer.Text = "Supprimer";
             this.btn_Supprimer.UseVisualStyleBackColor = true;
             // 
             // btn_Modifier
             // 
-            this.btn_Modifier.Location = new System.Drawing.Point(171, 208);
+            this.btn_Modifier.Location = new System.Drawing.Point(128, 169);
+            this.btn_Modifier.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Modifier.Name = "btn_Modifier";
-            this.btn_Modifier.Size = new System.Drawing.Size(99, 33);
+            this.btn_Modifier.Size = new System.Drawing.Size(74, 27);
             this.btn_Modifier.TabIndex = 5;
             this.btn_Modifier.Text = "Modifier";
             this.btn_Modifier.UseVisualStyleBackColor = true;
             // 
             // btn_Rechercher
             // 
-            this.btn_Rechercher.Location = new System.Drawing.Point(623, 440);
+            this.btn_Rechercher.Location = new System.Drawing.Point(467, 358);
+            this.btn_Rechercher.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Rechercher.Name = "btn_Rechercher";
-            this.btn_Rechercher.Size = new System.Drawing.Size(99, 33);
+            this.btn_Rechercher.Size = new System.Drawing.Size(74, 27);
             this.btn_Rechercher.TabIndex = 6;
             this.btn_Rechercher.Text = "Rechercher";
             this.btn_Rechercher.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::TP2_Sql.Properties.Resources.Deconnecter;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.BackgroundImage = global::TP2_Sql.Properties.Resources.Deconnecter;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(9, 10);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 47);
+            this.pictureBox1.Size = new System.Drawing.Size(38, 38);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // tb_ModSup
             // 
-            this.tb_ModSup.Location = new System.Drawing.Point(48, 245);
+            this.tb_ModSup.Location = new System.Drawing.Point(36, 199);
+            this.tb_ModSup.Margin = new System.Windows.Forms.Padding(2);
             this.tb_ModSup.Name = "tb_ModSup";
-            this.tb_ModSup.Size = new System.Drawing.Size(100, 22);
+            this.tb_ModSup.Size = new System.Drawing.Size(76, 20);
             this.tb_ModSup.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 219);
+            this.label1.Location = new System.Drawing.Point(27, 178);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 17);
+            this.label1.Size = new System.Drawing.Size(95, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "Numero d\'Employé";
             // 
+            // LB_Connection
+            // 
+            this.LB_Connection.AutoSize = true;
+            this.LB_Connection.Location = new System.Drawing.Point(53, 22);
+            this.LB_Connection.Name = "LB_Connection";
+            this.LB_Connection.Size = new System.Drawing.Size(39, 13);
+            this.LB_Connection.TabIndex = 10;
+            this.LB_Connection.Text = "Closed";
+            // 
             // FormPrincipale
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(237)))), ((int)(((byte)(137)))));
-            this.ClientSize = new System.Drawing.Size(838, 621);
+            this.ClientSize = new System.Drawing.Size(628, 505);
+            this.Controls.Add(this.LB_Connection);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tb_ModSup);
             this.Controls.Add(this.btn_Rechercher);
@@ -134,11 +133,11 @@
             this.Controls.Add(this.btn_Supprimer);
             this.Controls.Add(this.btn_Ajouter);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btn_Deconnexion);
-            this.Controls.Add(this.btn_Connexion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormPrincipale";
             this.Text = "FormPrincipale";
+            this.Load += new System.EventHandler(this.FormPrincipale_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -147,8 +146,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn_Connexion;
-        private System.Windows.Forms.Button btn_Deconnexion;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_Ajouter;
         private System.Windows.Forms.Button btn_Supprimer;
@@ -156,5 +153,6 @@
         private System.Windows.Forms.Button btn_Rechercher;
         private System.Windows.Forms.TextBox tb_ModSup;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LB_Connection;
     }
 }

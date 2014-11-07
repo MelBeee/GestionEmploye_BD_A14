@@ -16,5 +16,19 @@ namespace TP2_Sql
         {
             InitializeComponent();
         }
+
+        private void btn_Connexion_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.User = tb_Username.Text;
+            Properties.Settings.Default.Passwd = tb_Password.Text;
+            Properties.Settings.Default.Save();
+        }
+
+        private void Connexion_Load(object sender, EventArgs e)
+        {
+            tb_Username.Text = Properties.Settings.Default.User;
+            tb_Password.Text = Properties.Settings.Default.Passwd;
+        }
+
     }
 }
