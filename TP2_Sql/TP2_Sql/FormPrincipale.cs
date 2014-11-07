@@ -21,9 +21,27 @@ namespace TP2_Sql
             InitializeComponent();
         }
 
+        void updateButton()
+        {
+            if (!connection)
+            {
+                btn_Ajouter.Enabled = false;
+                btn_Modifier.Enabled = false;
+                btn_Rechercher.Enabled = false;
+                btn_Supprimer.Enabled = false;
+            }
+            else
+            {
+                btn_Ajouter.Enabled = true;
+                btn_Modifier.Enabled = true;
+                btn_Rechercher.Enabled = true;
+                btn_Supprimer.Enabled = true;
+            }
+        }
+
         private void FormPrincipale_Load(object sender, EventArgs e)
         {
-
+            updateButton();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -64,7 +82,7 @@ namespace TP2_Sql
                 connection = false;
                 LB_Connection.Text = oraconn.State.ToString();
             }
-
+            updateButton();
         }
 
         private void FormPrincipale_FormClosing(object sender, FormClosingEventArgs e)
