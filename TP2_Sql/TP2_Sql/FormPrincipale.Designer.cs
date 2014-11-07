@@ -30,11 +30,13 @@
         {
             this.btn_Connexion = new System.Windows.Forms.Button();
             this.btn_Deconnexion = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_Ajouter = new System.Windows.Forms.Button();
             this.btn_Supprimer = new System.Windows.Forms.Button();
             this.btn_Modifier = new System.Windows.Forms.Button();
             this.btn_Rechercher = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tb_ModSup = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,6 +59,42 @@
             this.btn_Deconnexion.Text = "Deconnexion";
             this.btn_Deconnexion.UseVisualStyleBackColor = true;
             // 
+            // btn_Ajouter
+            // 
+            this.btn_Ajouter.Location = new System.Drawing.Point(71, 160);
+            this.btn_Ajouter.Name = "btn_Ajouter";
+            this.btn_Ajouter.Size = new System.Drawing.Size(154, 33);
+            this.btn_Ajouter.TabIndex = 3;
+            this.btn_Ajouter.Text = "Ajouter un employé";
+            this.btn_Ajouter.UseVisualStyleBackColor = true;
+            // 
+            // btn_Supprimer
+            // 
+            this.btn_Supprimer.Location = new System.Drawing.Point(171, 247);
+            this.btn_Supprimer.Name = "btn_Supprimer";
+            this.btn_Supprimer.Size = new System.Drawing.Size(99, 33);
+            this.btn_Supprimer.TabIndex = 4;
+            this.btn_Supprimer.Text = "Supprimer";
+            this.btn_Supprimer.UseVisualStyleBackColor = true;
+            // 
+            // btn_Modifier
+            // 
+            this.btn_Modifier.Location = new System.Drawing.Point(171, 208);
+            this.btn_Modifier.Name = "btn_Modifier";
+            this.btn_Modifier.Size = new System.Drawing.Size(99, 33);
+            this.btn_Modifier.TabIndex = 5;
+            this.btn_Modifier.Text = "Modifier";
+            this.btn_Modifier.UseVisualStyleBackColor = true;
+            // 
+            // btn_Rechercher
+            // 
+            this.btn_Rechercher.Location = new System.Drawing.Point(623, 440);
+            this.btn_Rechercher.Name = "btn_Rechercher";
+            this.btn_Rechercher.Size = new System.Drawing.Size(99, 33);
+            this.btn_Rechercher.TabIndex = 6;
+            this.btn_Rechercher.Text = "Rechercher";
+            this.btn_Rechercher.UseVisualStyleBackColor = true;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::TP2_Sql.Properties.Resources.Deconnecter;
@@ -67,41 +105,21 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // btn_Ajouter
+            // tb_ModSup
             // 
-            this.btn_Ajouter.Location = new System.Drawing.Point(71, 147);
-            this.btn_Ajouter.Name = "btn_Ajouter";
-            this.btn_Ajouter.Size = new System.Drawing.Size(99, 33);
-            this.btn_Ajouter.TabIndex = 3;
-            this.btn_Ajouter.Text = "Ajouter";
-            this.btn_Ajouter.UseVisualStyleBackColor = true;
+            this.tb_ModSup.Location = new System.Drawing.Point(48, 245);
+            this.tb_ModSup.Name = "tb_ModSup";
+            this.tb_ModSup.Size = new System.Drawing.Size(100, 22);
+            this.tb_ModSup.TabIndex = 8;
             // 
-            // btn_Supprimer
+            // label1
             // 
-            this.btn_Supprimer.Location = new System.Drawing.Point(71, 225);
-            this.btn_Supprimer.Name = "btn_Supprimer";
-            this.btn_Supprimer.Size = new System.Drawing.Size(99, 33);
-            this.btn_Supprimer.TabIndex = 4;
-            this.btn_Supprimer.Text = "Supprimer";
-            this.btn_Supprimer.UseVisualStyleBackColor = true;
-            // 
-            // btn_Modifier
-            // 
-            this.btn_Modifier.Location = new System.Drawing.Point(71, 186);
-            this.btn_Modifier.Name = "btn_Modifier";
-            this.btn_Modifier.Size = new System.Drawing.Size(99, 33);
-            this.btn_Modifier.TabIndex = 5;
-            this.btn_Modifier.Text = "Modifier";
-            this.btn_Modifier.UseVisualStyleBackColor = true;
-            // 
-            // btn_Rechercher
-            // 
-            this.btn_Rechercher.Location = new System.Drawing.Point(71, 314);
-            this.btn_Rechercher.Name = "btn_Rechercher";
-            this.btn_Rechercher.Size = new System.Drawing.Size(99, 33);
-            this.btn_Rechercher.TabIndex = 6;
-            this.btn_Rechercher.Text = "Rechercher";
-            this.btn_Rechercher.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(36, 219);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(127, 17);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Numero d\'Employé";
             // 
             // FormPrincipale
             // 
@@ -109,6 +127,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(237)))), ((int)(((byte)(137)))));
             this.ClientSize = new System.Drawing.Size(838, 621);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.tb_ModSup);
             this.Controls.Add(this.btn_Rechercher);
             this.Controls.Add(this.btn_Modifier);
             this.Controls.Add(this.btn_Supprimer);
@@ -121,6 +141,7 @@
             this.Text = "FormPrincipale";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -133,5 +154,7 @@
         private System.Windows.Forms.Button btn_Supprimer;
         private System.Windows.Forms.Button btn_Modifier;
         private System.Windows.Forms.Button btn_Rechercher;
+        private System.Windows.Forms.TextBox tb_ModSup;
+        private System.Windows.Forms.Label label1;
     }
 }
