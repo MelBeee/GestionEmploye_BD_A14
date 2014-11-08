@@ -91,5 +91,10 @@ namespace TP2_Sql
         {
             oraconn.Close();
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
