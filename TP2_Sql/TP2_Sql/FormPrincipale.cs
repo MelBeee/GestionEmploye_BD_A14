@@ -101,7 +101,41 @@ namespace TP2_Sql
         {
             Recherche dlg = new Recherche();
 
-            dlg.Show(); 
+            if(dlg.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+        }
+
+        private void btn_Ajouter_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btn_Modifier_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Supprimer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AjouterModifier()
+        {
+            AjouterModifier dlg = new AjouterModifier(); 
+
+            if (TB_ModSup.Text == "")
+            {
+
+            }
+            else
+            {
+                
+            }
+
+            dlg.Text = (TB_ModSup.Text == "" ? "Nouveau" : "Modification");
         }
     }
 }

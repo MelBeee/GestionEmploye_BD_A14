@@ -71,6 +71,7 @@
             this.btn_Ajouter.TabIndex = 3;
             this.btn_Ajouter.Text = "Ajouter un employé";
             this.btn_Ajouter.UseVisualStyleBackColor = true;
+            this.btn_Ajouter.Click += new System.EventHandler(this.btn_Ajouter_Click);
             // 
             // btn_Supprimer
             // 
@@ -81,6 +82,7 @@
             this.btn_Supprimer.TabIndex = 4;
             this.btn_Supprimer.Text = "Supprimer";
             this.btn_Supprimer.UseVisualStyleBackColor = true;
+            this.btn_Supprimer.Click += new System.EventHandler(this.btn_Supprimer_Click);
             // 
             // btn_Modifier
             // 
@@ -91,6 +93,7 @@
             this.btn_Modifier.TabIndex = 5;
             this.btn_Modifier.Text = "Modifier";
             this.btn_Modifier.UseVisualStyleBackColor = true;
+            this.btn_Modifier.Click += new System.EventHandler(this.btn_Modifier_Click);
             // 
             // btn_Rechercher
             // 

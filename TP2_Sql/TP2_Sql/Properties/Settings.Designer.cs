@@ -58,5 +58,17 @@ namespace TP2_Sql.Properties {
                 this["CommandeSelect"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CommandeInsertUpdate {
+            get {
+                return ((string)(this["CommandeInsertUpdate"]));
+            }
+            set {
+                this["CommandeInsertUpdate"] = value;
+            }
+        }
     }
 }

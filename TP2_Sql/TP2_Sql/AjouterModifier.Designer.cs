@@ -42,27 +42,31 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tb_Dep = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.TB_Adresse = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btn_Enregistrer
             // 
             this.btn_Enregistrer.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_Enregistrer.Location = new System.Drawing.Point(60, 232);
+            this.btn_Enregistrer.Location = new System.Drawing.Point(60, 258);
             this.btn_Enregistrer.Name = "btn_Enregistrer";
             this.btn_Enregistrer.Size = new System.Drawing.Size(94, 33);
             this.btn_Enregistrer.TabIndex = 0;
             this.btn_Enregistrer.Text = "Enregistrer";
             this.btn_Enregistrer.UseVisualStyleBackColor = true;
+            this.btn_Enregistrer.Click += new System.EventHandler(this.btn_Enregistrer_Click);
             // 
             // btn_Annuler
             // 
             this.btn_Annuler.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_Annuler.Location = new System.Drawing.Point(160, 232);
+            this.btn_Annuler.Location = new System.Drawing.Point(160, 258);
             this.btn_Annuler.Name = "btn_Annuler";
             this.btn_Annuler.Size = new System.Drawing.Size(94, 33);
             this.btn_Annuler.TabIndex = 1;
             this.btn_Annuler.Text = "Annuler";
             this.btn_Annuler.UseVisualStyleBackColor = true;
+            this.btn_Annuler.Click += new System.EventHandler(this.btn_Annuler_Click);
             // 
             // label1
             // 
@@ -79,6 +83,7 @@
             this.tb_NumEmp.Name = "tb_NumEmp";
             this.tb_NumEmp.Size = new System.Drawing.Size(100, 22);
             this.tb_NumEmp.TabIndex = 1;
+            this.tb_NumEmp.TextChanged += new System.EventHandler(this.tb_NumEmp_TextChanged);
             // 
             // tb_Echelon
             // 
@@ -86,6 +91,7 @@
             this.tb_Echelon.Name = "tb_Echelon";
             this.tb_Echelon.Size = new System.Drawing.Size(100, 22);
             this.tb_Echelon.TabIndex = 5;
+            this.tb_Echelon.TextChanged += new System.EventHandler(this.tb_Echelon_TextChanged);
             // 
             // label2
             // 
@@ -102,6 +108,7 @@
             this.tb_Nom.Name = "tb_Nom";
             this.tb_Nom.Size = new System.Drawing.Size(100, 22);
             this.tb_Nom.TabIndex = 2;
+            this.tb_Nom.TextChanged += new System.EventHandler(this.tb_Nom_TextChanged);
             // 
             // label3
             // 
@@ -118,6 +125,7 @@
             this.tb_Prenom.Name = "tb_Prenom";
             this.tb_Prenom.Size = new System.Drawing.Size(100, 22);
             this.tb_Prenom.TabIndex = 3;
+            this.tb_Prenom.TextChanged += new System.EventHandler(this.tb_Prenom_TextChanged);
             // 
             // label4
             // 
@@ -134,6 +142,7 @@
             this.tb_Salaire.Name = "tb_Salaire";
             this.tb_Salaire.Size = new System.Drawing.Size(100, 22);
             this.tb_Salaire.TabIndex = 4;
+            this.tb_Salaire.TextChanged += new System.EventHandler(this.tb_Salaire_TextChanged);
             // 
             // label5
             // 
@@ -150,6 +159,7 @@
             this.tb_Dep.Name = "tb_Dep";
             this.tb_Dep.Size = new System.Drawing.Size(100, 22);
             this.tb_Dep.TabIndex = 6;
+            this.tb_Dep.TextChanged += new System.EventHandler(this.tb_Dep_TextChanged);
             // 
             // label6
             // 
@@ -160,6 +170,23 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "Département";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(94, 212);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 17);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Adresse";
+            // 
+            // TB_Adresse
+            // 
+            this.TB_Adresse.Location = new System.Drawing.Point(160, 209);
+            this.TB_Adresse.Name = "TB_Adresse";
+            this.TB_Adresse.Size = new System.Drawing.Size(100, 22);
+            this.TB_Adresse.TabIndex = 14;
+            this.TB_Adresse.TextChanged += new System.EventHandler(this.TB_Adresse_TextChanged);
+            // 
             // AjouterModifier
             // 
             this.AcceptButton = this.btn_Enregistrer;
@@ -167,7 +194,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(237)))), ((int)(((byte)(137)))));
             this.CancelButton = this.btn_Annuler;
-            this.ClientSize = new System.Drawing.Size(315, 287);
+            this.ClientSize = new System.Drawing.Size(315, 316);
+            this.Controls.Add(this.TB_Adresse);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.tb_Dep);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tb_Salaire);
@@ -185,6 +214,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AjouterModifier";
             this.Text = "AjouterModifier";
+            this.Load += new System.EventHandler(this.AjouterModifier_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,5 +236,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tb_Dep;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox TB_Adresse;
     }
 }
