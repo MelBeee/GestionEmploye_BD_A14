@@ -28,63 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.RBTN_Tout = new System.Windows.Forms.RadioButton();
+            this.RBTN_Nom = new System.Windows.Forms.RadioButton();
+            this.RBTN_Dep = new System.Windows.Forms.RadioButton();
             this.BTN_Ok = new System.Windows.Forms.Button();
             this.BTN_Annuler = new System.Windows.Forms.Button();
+            this.TB_Nom = new System.Windows.Forms.TextBox();
+            this.LB_Text = new System.Windows.Forms.Label();
+            this.CB_Dep = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // radioButton1
+            // RBTN_Tout
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(21, 71);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(147, 21);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Tous les employés";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.RBTN_Tout.AutoSize = true;
+            this.RBTN_Tout.Location = new System.Drawing.Point(12, 11);
+            this.RBTN_Tout.Name = "RBTN_Tout";
+            this.RBTN_Tout.Size = new System.Drawing.Size(147, 21);
+            this.RBTN_Tout.TabIndex = 0;
+            this.RBTN_Tout.TabStop = true;
+            this.RBTN_Tout.Text = "Tous les employés";
+            this.RBTN_Tout.UseVisualStyleBackColor = true;
+            this.RBTN_Tout.CheckedChanged += new System.EventHandler(this.RBTN_Tout_CheckedChanged);
             // 
-            // radioButton2
+            // RBTN_Nom
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(21, 97);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(127, 21);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Nom d\'Employé";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.RBTN_Nom.AutoSize = true;
+            this.RBTN_Nom.Location = new System.Drawing.Point(12, 37);
+            this.RBTN_Nom.Name = "RBTN_Nom";
+            this.RBTN_Nom.Size = new System.Drawing.Size(127, 21);
+            this.RBTN_Nom.TabIndex = 1;
+            this.RBTN_Nom.TabStop = true;
+            this.RBTN_Nom.Text = "Nom d\'Employé";
+            this.RBTN_Nom.UseVisualStyleBackColor = true;
+            this.RBTN_Nom.CheckedChanged += new System.EventHandler(this.RBTN_Nom_CheckedChanged);
             // 
-            // radioButton3
+            // RBTN_Dep
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(21, 124);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(111, 21);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Département";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(65, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 25);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Rechercher par";
+            this.RBTN_Dep.AutoSize = true;
+            this.RBTN_Dep.Location = new System.Drawing.Point(12, 64);
+            this.RBTN_Dep.Name = "RBTN_Dep";
+            this.RBTN_Dep.Size = new System.Drawing.Size(111, 21);
+            this.RBTN_Dep.TabIndex = 2;
+            this.RBTN_Dep.TabStop = true;
+            this.RBTN_Dep.Text = "Département";
+            this.RBTN_Dep.UseVisualStyleBackColor = true;
+            this.RBTN_Dep.CheckedChanged += new System.EventHandler(this.RBTN_Dep_CheckedChanged);
             // 
             // BTN_Ok
             // 
             this.BTN_Ok.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BTN_Ok.Location = new System.Drawing.Point(64, 218);
+            this.BTN_Ok.Location = new System.Drawing.Point(328, 14);
             this.BTN_Ok.Name = "BTN_Ok";
-            this.BTN_Ok.Size = new System.Drawing.Size(75, 32);
+            this.BTN_Ok.Size = new System.Drawing.Size(75, 34);
             this.BTN_Ok.TabIndex = 4;
             this.BTN_Ok.Text = "Ok";
             this.BTN_Ok.UseVisualStyleBackColor = true;
@@ -92,12 +87,40 @@
             // BTN_Annuler
             // 
             this.BTN_Annuler.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BTN_Annuler.Location = new System.Drawing.Point(145, 218);
+            this.BTN_Annuler.Location = new System.Drawing.Point(328, 54);
             this.BTN_Annuler.Name = "BTN_Annuler";
-            this.BTN_Annuler.Size = new System.Drawing.Size(75, 32);
+            this.BTN_Annuler.Size = new System.Drawing.Size(75, 34);
             this.BTN_Annuler.TabIndex = 5;
             this.BTN_Annuler.Text = "Annuler";
             this.BTN_Annuler.UseVisualStyleBackColor = true;
+            this.BTN_Annuler.Click += new System.EventHandler(this.BTN_Annuler_Click);
+            // 
+            // TB_Nom
+            // 
+            this.TB_Nom.Location = new System.Drawing.Point(185, 49);
+            this.TB_Nom.Name = "TB_Nom";
+            this.TB_Nom.Size = new System.Drawing.Size(121, 22);
+            this.TB_Nom.TabIndex = 6;
+            this.TB_Nom.TextChanged += new System.EventHandler(this.TB_Nom_TextChanged);
+            // 
+            // LB_Text
+            // 
+            this.LB_Text.AutoSize = true;
+            this.LB_Text.Location = new System.Drawing.Point(184, 26);
+            this.LB_Text.Name = "LB_Text";
+            this.LB_Text.Size = new System.Drawing.Size(46, 17);
+            this.LB_Text.TabIndex = 7;
+            this.LB_Text.Text = "label2";
+            // 
+            // CB_Dep
+            // 
+            this.CB_Dep.FormattingEnabled = true;
+            this.CB_Dep.Location = new System.Drawing.Point(185, 77);
+            this.CB_Dep.Name = "CB_Dep";
+            this.CB_Dep.Size = new System.Drawing.Size(121, 24);
+            this.CB_Dep.TabIndex = 8;
+            this.CB_Dep.SelectedIndexChanged += new System.EventHandler(this.CB_Dep_SelectedIndexChanged);
+            this.CB_Dep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CB_Dep_KeyPress);
             // 
             // Recherche
             // 
@@ -106,16 +129,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(237)))), ((int)(((byte)(137)))));
             this.CancelButton = this.BTN_Annuler;
-            this.ClientSize = new System.Drawing.Size(286, 262);
+            this.ClientSize = new System.Drawing.Size(418, 102);
+            this.Controls.Add(this.CB_Dep);
+            this.Controls.Add(this.LB_Text);
+            this.Controls.Add(this.TB_Nom);
             this.Controls.Add(this.BTN_Annuler);
             this.Controls.Add(this.BTN_Ok);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.RBTN_Dep);
+            this.Controls.Add(this.RBTN_Nom);
+            this.Controls.Add(this.RBTN_Tout);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Recherche";
-            this.Text = "Recherche";
+            this.Text = "Rechercher";
             this.Load += new System.EventHandler(this.Recherche_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -124,11 +149,13 @@
 
         #endregion
 
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton RBTN_Tout;
+        private System.Windows.Forms.RadioButton RBTN_Nom;
+        private System.Windows.Forms.RadioButton RBTN_Dep;
         private System.Windows.Forms.Button BTN_Ok;
         private System.Windows.Forms.Button BTN_Annuler;
+        private System.Windows.Forms.TextBox TB_Nom;
+        private System.Windows.Forms.Label LB_Text;
+        private System.Windows.Forms.ComboBox CB_Dep;
     }
 }
