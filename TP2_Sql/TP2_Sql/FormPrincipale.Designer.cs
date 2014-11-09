@@ -38,6 +38,13 @@
             this.BTN_Suivant = new System.Windows.Forms.Button();
             this.BTN_Precedant = new System.Windows.Forms.Button();
             this.GB_Employe = new System.Windows.Forms.GroupBox();
+            this.LB_Adresse = new System.Windows.Forms.Label();
+            this.LB_Dep = new System.Windows.Forms.Label();
+            this.LB_Salaire = new System.Windows.Forms.Label();
+            this.LB_Echelon = new System.Windows.Forms.Label();
+            this.LB_Nom = new System.Windows.Forms.Label();
+            this.LB_Prenom = new System.Windows.Forms.Label();
+            this.LB_Numemp = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -49,13 +56,6 @@
             this.CodeDep = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomDep = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NbrEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LB_Numemp = new System.Windows.Forms.Label();
-            this.LB_Prenom = new System.Windows.Forms.Label();
-            this.LB_Nom = new System.Windows.Forms.Label();
-            this.LB_Echelon = new System.Windows.Forms.Label();
-            this.LB_Salaire = new System.Windows.Forms.Label();
-            this.LB_Dep = new System.Windows.Forms.Label();
-            this.LB_Adresse = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GB_Employe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Departement)).BeginInit();
@@ -101,6 +101,7 @@
             this.btn_Rechercher.TabIndex = 6;
             this.btn_Rechercher.Text = "Rechercher";
             this.btn_Rechercher.UseVisualStyleBackColor = true;
+            this.btn_Rechercher.Click += new System.EventHandler(this.btn_Rechercher_Click);
             // 
             // TB_ModSup
             // 
@@ -172,6 +173,70 @@
             this.GB_Employe.TabIndex = 13;
             this.GB_Employe.TabStop = false;
             this.GB_Employe.Text = " Employé (X résultats)";
+            // 
+            // LB_Adresse
+            // 
+            this.LB_Adresse.AutoSize = true;
+            this.LB_Adresse.Location = new System.Drawing.Point(117, 173);
+            this.LB_Adresse.Name = "LB_Adresse";
+            this.LB_Adresse.Size = new System.Drawing.Size(149, 17);
+            this.LB_Adresse.TabIndex = 13;
+            this.LB_Adresse.Text = "105 Inconnu, Montreal";
+            // 
+            // LB_Dep
+            // 
+            this.LB_Dep.AutoSize = true;
+            this.LB_Dep.Location = new System.Drawing.Point(117, 151);
+            this.LB_Dep.Name = "LB_Dep";
+            this.LB_Dep.Size = new System.Drawing.Size(150, 17);
+            this.LB_Dep.TabIndex = 12;
+            this.LB_Dep.Text = "Ressources Humaines";
+            // 
+            // LB_Salaire
+            // 
+            this.LB_Salaire.AutoSize = true;
+            this.LB_Salaire.Location = new System.Drawing.Point(117, 130);
+            this.LB_Salaire.Name = "LB_Salaire";
+            this.LB_Salaire.Size = new System.Drawing.Size(48, 17);
+            this.LB_Salaire.TabIndex = 11;
+            this.LB_Salaire.Text = "25000";
+            // 
+            // LB_Echelon
+            // 
+            this.LB_Echelon.AutoSize = true;
+            this.LB_Echelon.Location = new System.Drawing.Point(117, 107);
+            this.LB_Echelon.Name = "LB_Echelon";
+            this.LB_Echelon.Size = new System.Drawing.Size(16, 17);
+            this.LB_Echelon.TabIndex = 10;
+            this.LB_Echelon.Text = "0";
+            // 
+            // LB_Nom
+            // 
+            this.LB_Nom.AutoSize = true;
+            this.LB_Nom.Location = new System.Drawing.Point(117, 85);
+            this.LB_Nom.Name = "LB_Nom";
+            this.LB_Nom.Size = new System.Drawing.Size(34, 17);
+            this.LB_Nom.TabIndex = 9;
+            this.LB_Nom.Text = "Doe";
+            // 
+            // LB_Prenom
+            // 
+            this.LB_Prenom.AutoSize = true;
+            this.LB_Prenom.Location = new System.Drawing.Point(117, 63);
+            this.LB_Prenom.Name = "LB_Prenom";
+            this.LB_Prenom.Size = new System.Drawing.Size(39, 17);
+            this.LB_Prenom.TabIndex = 8;
+            this.LB_Prenom.Text = "Jane";
+            // 
+            // LB_Numemp
+            // 
+            this.LB_Numemp.AutoSize = true;
+            this.LB_Numemp.Location = new System.Drawing.Point(117, 39);
+            this.LB_Numemp.Name = "LB_Numemp";
+            this.LB_Numemp.Size = new System.Drawing.Size(24, 17);
+            this.LB_Numemp.TabIndex = 7;
+            this.LB_Numemp.Text = "00";
+            this.LB_Numemp.Click += new System.EventHandler(this.label9_Click);
             // 
             // label8
             // 
@@ -287,70 +352,6 @@
             this.NbrEmp.Name = "NbrEmp";
             this.NbrEmp.ReadOnly = true;
             this.NbrEmp.Width = 60;
-            // 
-            // LB_Numemp
-            // 
-            this.LB_Numemp.AutoSize = true;
-            this.LB_Numemp.Location = new System.Drawing.Point(117, 39);
-            this.LB_Numemp.Name = "LB_Numemp";
-            this.LB_Numemp.Size = new System.Drawing.Size(24, 17);
-            this.LB_Numemp.TabIndex = 7;
-            this.LB_Numemp.Text = "00";
-            this.LB_Numemp.Click += new System.EventHandler(this.label9_Click);
-            // 
-            // LB_Prenom
-            // 
-            this.LB_Prenom.AutoSize = true;
-            this.LB_Prenom.Location = new System.Drawing.Point(117, 63);
-            this.LB_Prenom.Name = "LB_Prenom";
-            this.LB_Prenom.Size = new System.Drawing.Size(39, 17);
-            this.LB_Prenom.TabIndex = 8;
-            this.LB_Prenom.Text = "Jane";
-            // 
-            // LB_Nom
-            // 
-            this.LB_Nom.AutoSize = true;
-            this.LB_Nom.Location = new System.Drawing.Point(117, 85);
-            this.LB_Nom.Name = "LB_Nom";
-            this.LB_Nom.Size = new System.Drawing.Size(34, 17);
-            this.LB_Nom.TabIndex = 9;
-            this.LB_Nom.Text = "Doe";
-            // 
-            // LB_Echelon
-            // 
-            this.LB_Echelon.AutoSize = true;
-            this.LB_Echelon.Location = new System.Drawing.Point(117, 107);
-            this.LB_Echelon.Name = "LB_Echelon";
-            this.LB_Echelon.Size = new System.Drawing.Size(16, 17);
-            this.LB_Echelon.TabIndex = 10;
-            this.LB_Echelon.Text = "0";
-            // 
-            // LB_Salaire
-            // 
-            this.LB_Salaire.AutoSize = true;
-            this.LB_Salaire.Location = new System.Drawing.Point(117, 130);
-            this.LB_Salaire.Name = "LB_Salaire";
-            this.LB_Salaire.Size = new System.Drawing.Size(48, 17);
-            this.LB_Salaire.TabIndex = 11;
-            this.LB_Salaire.Text = "25000";
-            // 
-            // LB_Dep
-            // 
-            this.LB_Dep.AutoSize = true;
-            this.LB_Dep.Location = new System.Drawing.Point(117, 151);
-            this.LB_Dep.Name = "LB_Dep";
-            this.LB_Dep.Size = new System.Drawing.Size(150, 17);
-            this.LB_Dep.TabIndex = 12;
-            this.LB_Dep.Text = "Ressources Humaines";
-            // 
-            // LB_Adresse
-            // 
-            this.LB_Adresse.AutoSize = true;
-            this.LB_Adresse.Location = new System.Drawing.Point(117, 173);
-            this.LB_Adresse.Name = "LB_Adresse";
-            this.LB_Adresse.Size = new System.Drawing.Size(149, 17);
-            this.LB_Adresse.TabIndex = 13;
-            this.LB_Adresse.Text = "105 Inconnu, Montreal";
             // 
             // pictureBox1
             // 

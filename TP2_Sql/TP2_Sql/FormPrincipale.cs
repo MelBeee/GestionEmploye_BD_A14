@@ -96,5 +96,12 @@ namespace TP2_Sql
         {
 
         }
+
+        private void btn_Rechercher_Click(object sender, EventArgs e)
+        {
+            Recherche dlg = new Recherche();
+
+            dlg.Show(); 
+        }
     }
 }
