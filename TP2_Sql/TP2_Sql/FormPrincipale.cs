@@ -148,15 +148,17 @@ namespace TP2_Sql
 
         private void RemplirDataGridViewDepartement()
         {
-            //DGV_Departement.Rows.Clear();
-            //string sql = "select e.codedep, d.nomdepartement " + //,count(e.codedep)  " + 
-            //             "from employes e " + 
-            //             "inner join departements d on e.codedep = d.codedep " +
-            //             "group by e.codedep, d.nomdepartement " +
-            //             "order by e.codedep; ";
+            DGV_Departement.Rows.Clear();
+            string sql = "select e.codedep, d.nomdepartement " + ", count(e.codedep) " + 
+                         "from employes e " +
+                         "inner join departements d on e.codedep = d.codedep " +
+                         "group by e.codedep, d.nomdepartement " +
+                         "order by e.codedep ";
             // code nomdep numemp
 
-            string sql = "select codedep, nomdepartement from departements"; 
+            
+
+            //string sql = "select codedep, nomdepartement from departements"; 
             try
             {
                 DGV_Departement.Rows.Clear();
@@ -164,15 +166,14 @@ namespace TP2_Sql
                 orcd.CommandType = CommandType.Text;
                 OracleDataReader oraRead = orcd.ExecuteReader();
 
-                label9.Text = oraRead.GetDataTypeName(0);
-                label10.Text = oraRead.GetDataTypeName(1);
                 //label11.Text = oraRead.GetDataTypeName(2);
                 while (oraRead.Read())
                 {
                     DGV_Departement.Rows.Add(
-                    oraRead.GetChar(0),
-                    oraRead.GetString(1)
-                    );//oraRead.GetDouble(2));
+                    oraRead.GetString(0),
+                    oraRead.GetString(1),
+                    oraRead.GetInt32(2)
+                    );
                 }
                 oraRead.Close();
             }

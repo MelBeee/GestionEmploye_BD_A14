@@ -44,4 +44,12 @@ INSERT INTO Employes VALUES(17,'Syvestio',        'Davyd',    25000,  9,  '180 V
 INSERT INTO Employes VALUES(18,'Clémentine',      'Dominique',90000,  3,  '190 Beriot, Boisbriand',     '500');
 INSERT INTO Employes VALUES(19,'Enfant',          'Alexiss',  50000,  10, '200 Delage, Mont-Tremblant', '500');
 
+
+
+select e.codedep, d.nomdepartement ,to_char(count(e.codedep))
+                         from employes e 
+                         inner join departements d on e.codedep = d.codedep 
+                         group by e.codedep, d.nomdepartement 
+                         order by e.codedep; 
+
 commit;
