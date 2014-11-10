@@ -58,9 +58,6 @@
             this.NbrEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BTN_Refresh = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.GB_Employe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Departement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -404,42 +401,12 @@
             this.BTN_Refresh.UseVisualStyleBackColor = true;
             this.BTN_Refresh.Click += new System.EventHandler(this.BTN_Refresh_Click);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(123, 235);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "label9";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(123, 254);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 13);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "label10";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(123, 271);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 13);
-            this.label11.TabIndex = 18;
-            this.label11.Text = "label11";
-            // 
             // FormPrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(237)))), ((int)(((byte)(137)))));
             this.ClientSize = new System.Drawing.Size(593, 368);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.BTN_Refresh);
             this.Controls.Add(this.DGV_Departement);
             this.Controls.Add(this.GB_Employe);
@@ -500,8 +467,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CodeDep;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomDep;
         private System.Windows.Forms.DataGridViewTextBoxColumn NbrEmp;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
     }
 }
