@@ -30,6 +30,7 @@ namespace TP2_Sql
                 btn_Rechercher.Enabled = false;
                 btn_Supprimer.Enabled = false;
                 TB_ModSup.Enabled = false;
+                BTN_Refresh.Enabled = false;
             }
             else
             {
@@ -38,13 +39,14 @@ namespace TP2_Sql
                 btn_Rechercher.Enabled = true;
                 btn_Supprimer.Enabled = true;
                 TB_ModSup.Enabled = true;
+                BTN_Refresh.Enabled = true;
             }
         }
 
         private void FormPrincipale_Load(object sender, EventArgs e)
         {
             updateButton();
-            RemplirDataGridViewDepartement();
+            //RemplirDataGridViewDepartement();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -171,6 +173,11 @@ namespace TP2_Sql
             {
                 MessageBox.Show(ex.Message.ToString());
             }
+        }
+
+        private void BTN_Refresh_Click(object sender, EventArgs e)
+        {
+            RemplirDataGridViewDepartement();
         }
     }
 }
