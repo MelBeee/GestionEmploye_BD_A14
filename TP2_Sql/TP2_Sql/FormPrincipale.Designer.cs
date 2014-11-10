@@ -328,14 +328,14 @@
             this.NomDep,
             this.NbrEmp});
             this.DGV_Departement.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(225)))), ((int)(((byte)(125)))));
-            this.DGV_Departement.Location = new System.Drawing.Point(492, 12);
+            this.DGV_Departement.Location = new System.Drawing.Point(483, 12);
             this.DGV_Departement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DGV_Departement.Name = "DGV_Departement";
             this.DGV_Departement.ReadOnly = true;
             this.DGV_Departement.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.DGV_Departement.RowHeadersVisible = false;
             this.DGV_Departement.RowTemplate.Height = 24;
-            this.DGV_Departement.Size = new System.Drawing.Size(261, 112);
+            this.DGV_Departement.Size = new System.Drawing.Size(280, 112);
             this.DGV_Departement.TabIndex = 14;
             this.DGV_Departement.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Departement_CellContentClick);
             // 
@@ -370,7 +370,7 @@
             this.CodeDep.Name = "CodeDep";
             this.CodeDep.ReadOnly = true;
             this.CodeDep.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.CodeDep.Width = 50;
+            this.CodeDep.Width = 62;
             // 
             // NomDep
             // 
@@ -379,7 +379,7 @@
             this.NomDep.Name = "NomDep";
             this.NomDep.ReadOnly = true;
             this.NomDep.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.NomDep.Width = 150;
+            this.NomDep.Width = 155;
             // 
             // NbrEmp
             // 
