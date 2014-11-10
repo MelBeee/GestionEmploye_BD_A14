@@ -333,6 +333,7 @@
             this.DGV_Departement.RowTemplate.Height = 24;
             this.DGV_Departement.Size = new System.Drawing.Size(262, 112);
             this.DGV_Departement.TabIndex = 14;
+            this.DGV_Departement.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Departement_CellContentClick);
             // 
             // CodeDep
             // 

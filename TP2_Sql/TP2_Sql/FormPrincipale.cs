@@ -44,6 +44,7 @@ namespace TP2_Sql
         private void FormPrincipale_Load(object sender, EventArgs e)
         {
             updateButton();
+            RemplirDataGridViewDepartement();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -136,6 +137,40 @@ namespace TP2_Sql
             }
 
             dlg.Text = (TB_ModSup.Text == "" ? "Nouveau" : "Modification");
+        }
+
+        private void DGV_Departement_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void RemplirDataGridViewDepartement()
+        {
+            DGV_Departement.Rows.Clear();
+            string sql = "select count(e.codedep) as nombre, e.codedep, d.nomdepartement " + 
+                         "from employes e " + 
+                         "inner join departements d on e.codedep = d.codedep " +
+                         "group by e.codedep, d.nomdepartement " +
+                         "order by e.codedep;";
+
+            try
+            {
+                OracleCommand orcd = new OracleCommand(sql, oraconn);
+                orcd.CommandType = CommandType.Text;
+                OracleDataReader oraRead = orcd.ExecuteReader();
+                while (oraRead.Read())
+                {
+                    DGV_Departement.Rows.Add(
+                    oraRead.GetInt32(0),
+                    oraRead.GetChar(1),
+                    oraRead.GetString(2));
+                }
+                oraRead.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
         }
     }
 }
