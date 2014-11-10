@@ -19,8 +19,8 @@ namespace TP2_Sql
 
         int PosExtX = 185;
         int PosExtY = 300;
-        int PosIntX = 185;
-        int PosIntY = 50;
+        int PosIntX = 140; // 139; 40
+        int PosIntY = 40;
 
         private void Recherche_Load(object sender, EventArgs e)
         {
@@ -50,7 +50,6 @@ namespace TP2_Sql
                 Properties.Settings.Default.CommandeSelect = "where departement = " + CB_Dep.Text;
             }
 
-            LB_Text.Text = Properties.Settings.Default.CommandeSelect;
         }
 
         private void BTN_Annuler_Click(object sender, EventArgs e)
@@ -72,26 +71,20 @@ namespace TP2_Sql
 
         private void RBTN_Nom_CheckedChanged(object sender, EventArgs e)
         {
-            if (RBTN_Nom.Checked)
-            {
-                LB_Text.Text = "Nom de l'Employé";
-                TB_Nom.Location = new Point(PosIntX, PosIntY);
-                CB_Dep.Location = new Point(PosExtX, PosExtY);
-            }
+            LB_Text.Text = "Nom de l'Employé";
+            TB_Nom.Location = new Point(PosIntX, PosIntY);
+            CB_Dep.Location = new Point(PosExtX, PosExtY);
             VerifierChoix();
         }
 
         private void RBTN_Dep_CheckedChanged(object sender, EventArgs e)
         {
-            if (RBTN_Dep.Checked)
-            {
-                LB_Text.Text = "Département";
-                TB_Nom.Location = new Point(PosExtX, PosExtY);
-                CB_Dep.Location = new Point(PosIntX, PosIntY);
-                TB_Nom.Text = "";
-                CB_Dep.SelectedIndex = 0;
-            }
+            LB_Text.Text = "Département";
+            TB_Nom.Location = new Point(PosExtX, PosExtY);
+            CB_Dep.Location = new Point(PosIntX, PosIntY);
+            TB_Nom.Text = "";
             VerifierChoix();
+            CB_Dep.SelectedItem = 0; 
         }
 
         private void TB_Nom_TextChanged(object sender, EventArgs e)
