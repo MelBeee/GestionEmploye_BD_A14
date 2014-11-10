@@ -69,7 +69,7 @@
             // btn_Ajouter
             // 
             this.btn_Ajouter.Location = new System.Drawing.Point(48, 92);
-            this.btn_Ajouter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Ajouter.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Ajouter.Name = "btn_Ajouter";
             this.btn_Ajouter.Size = new System.Drawing.Size(116, 27);
             this.btn_Ajouter.TabIndex = 3;
@@ -80,7 +80,7 @@
             // btn_Supprimer
             // 
             this.btn_Supprimer.Location = new System.Drawing.Point(123, 162);
-            this.btn_Supprimer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Supprimer.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Supprimer.Name = "btn_Supprimer";
             this.btn_Supprimer.Size = new System.Drawing.Size(74, 27);
             this.btn_Supprimer.TabIndex = 4;
@@ -91,7 +91,7 @@
             // btn_Modifier
             // 
             this.btn_Modifier.Location = new System.Drawing.Point(123, 131);
-            this.btn_Modifier.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Modifier.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Modifier.Name = "btn_Modifier";
             this.btn_Modifier.Size = new System.Drawing.Size(74, 27);
             this.btn_Modifier.TabIndex = 5;
@@ -102,7 +102,7 @@
             // btn_Rechercher
             // 
             this.btn_Rechercher.Location = new System.Drawing.Point(430, 115);
-            this.btn_Rechercher.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Rechercher.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Rechercher.Name = "btn_Rechercher";
             this.btn_Rechercher.Size = new System.Drawing.Size(74, 27);
             this.btn_Rechercher.TabIndex = 6;
@@ -113,7 +113,7 @@
             // TB_ModSup
             // 
             this.TB_ModSup.Location = new System.Drawing.Point(31, 161);
-            this.TB_ModSup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_ModSup.Margin = new System.Windows.Forms.Padding(2);
             this.TB_ModSup.Name = "TB_ModSup";
             this.TB_ModSup.Size = new System.Drawing.Size(76, 20);
             this.TB_ModSup.TabIndex = 8;
@@ -173,9 +173,9 @@
             this.GB_Employe.Controls.Add(this.label3);
             this.GB_Employe.Controls.Add(this.label2);
             this.GB_Employe.Location = new System.Drawing.Point(362, 148);
-            this.GB_Employe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GB_Employe.Margin = new System.Windows.Forms.Padding(2);
             this.GB_Employe.Name = "GB_Employe";
-            this.GB_Employe.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GB_Employe.Padding = new System.Windows.Forms.Padding(2);
             this.GB_Employe.Size = new System.Drawing.Size(210, 176);
             this.GB_Employe.TabIndex = 13;
             this.GB_Employe.TabStop = false;
@@ -344,7 +344,7 @@
             this.NbrEmp});
             this.DGV_Departement.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(225)))), ((int)(((byte)(125)))));
             this.DGV_Departement.Location = new System.Drawing.Point(362, 10);
-            this.DGV_Departement.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DGV_Departement.Margin = new System.Windows.Forms.Padding(2);
             this.DGV_Departement.Name = "DGV_Departement";
             this.DGV_Departement.ReadOnly = true;
             this.DGV_Departement.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -386,7 +386,7 @@
             this.pictureBox1.BackgroundImage = global::TP2_Sql.Properties.Resources.Deconnecter;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(9, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(38, 38);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -454,7 +454,7 @@
             this.Controls.Add(this.btn_Ajouter);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormPrincipale";
             this.Text = "FormPrincipale";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPrincipale_FormClosing);
