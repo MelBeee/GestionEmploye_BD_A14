@@ -149,11 +149,11 @@ namespace TP2_Sql
         private void RemplirDataGridViewDepartement()
         {
             DGV_Departement.Rows.Clear();
-            string sql = "select e.codedep, d.nomdepartement, count(e.codedep)" + 
-                         "from employes e" + 
-                         "inner join departements d on e.codedep = d.codedep" +
-                         "group by e.codedep, d.nomdepartement" +
-                         "order by e.codedep;";
+            string sql = "select e.codedep, d.nomdepartement, count(e.codedep) " + 
+                         "from employes e " + 
+                         "inner join departements d on e.codedep = d.codedep " +
+                         "group by e.codedep, d.nomdepartement " +
+                         "order by e.codedep; ";
             // code nomdep numemp
             try
             {
@@ -165,7 +165,7 @@ namespace TP2_Sql
                     DGV_Departement.Rows.Add(
                     oraRead.GetChar(0),
                     oraRead.GetString(1),
-                    oraRead.GetInt32(2));
+                    oraRead.GetDouble(2));
                 }
                 oraRead.Close();
             }
