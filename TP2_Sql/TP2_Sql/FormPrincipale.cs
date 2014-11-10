@@ -46,7 +46,6 @@ namespace TP2_Sql
         private void FormPrincipale_Load(object sender, EventArgs e)
         {
             updateButton();
-            //RemplirDataGridViewDepartement();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -78,6 +77,7 @@ namespace TP2_Sql
                         pictureBox1.BackgroundImage = Properties.Resources.Deconnecter;
                         connection = false;
                     }
+                    RemplirDataGridViewDepartement();
                 }
             }
             else 
@@ -164,7 +164,7 @@ namespace TP2_Sql
                 {
                     DGV_Departement.Rows.Add(
                     oraRead.GetInt32(0),
-                    oraRead.GetChar(1),
+                    oraRead.GetString(1),
                     oraRead.GetString(2));
                 }
                 oraRead.Close();
