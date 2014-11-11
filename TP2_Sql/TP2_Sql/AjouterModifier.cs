@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace TP2_Sql
 {
+    // jlgkyffuliho;`jo;
     public partial class AjouterModifier : Form
     {
         public AjouterModifier()
