@@ -119,7 +119,9 @@ namespace TP2_Sql
 
         private void btn_Supprimer_Click(object sender, EventArgs e)
         {
+            string sql;
 
+            sql = "";
         }
 
         private void AjouterModifier()
