@@ -47,7 +47,8 @@ namespace TP2_Sql
 
         private void btn_Annuler_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.CommandeInsertUpdate = ""; 
+            Properties.Settings.Default.CommandeInsertUpdate = "";
+            this.Close();
         }
 
         private void tb_NumEmp_TextChanged(object sender, EventArgs e)

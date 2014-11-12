@@ -30,16 +30,12 @@ namespace TP2_Sql
                 btn_Rechercher.Enabled = false;
                 btn_Supprimer.Enabled = false;
                 TB_ModSup.Enabled = false;
-                BTN_Refresh.Enabled = false;
             }
             else
             {
                 btn_Ajouter.Enabled = true;
-                btn_Modifier.Enabled = true;
                 btn_Rechercher.Enabled = true;
-                btn_Supprimer.Enabled = true;
                 TB_ModSup.Enabled = true;
-                BTN_Refresh.Enabled = true;
             }
         }
 
@@ -86,6 +82,7 @@ namespace TP2_Sql
                 pictureBox1.BackgroundImage = Properties.Resources.Deconnecter;
                 connection = false;
                 LB_Connection.Text = oraconn.State.ToString();
+                DGV_Departement.Rows.Clear();
             }
             updateButton();
         }
@@ -112,12 +109,12 @@ namespace TP2_Sql
 
         private void btn_Ajouter_Click(object sender, EventArgs e)
         {
-           
+            AjouterModifier();
         }
 
         private void btn_Modifier_Click(object sender, EventArgs e)
         {
-
+            AjouterModifier();
         }
 
         private void btn_Supprimer_Click(object sender, EventArgs e)
@@ -131,7 +128,7 @@ namespace TP2_Sql
 
             if (TB_ModSup.Text == "")
             {
-
+                dlg.Show();
             }
             else
             {
@@ -179,9 +176,18 @@ namespace TP2_Sql
             }
         }
 
-        private void BTN_Refresh_Click(object sender, EventArgs e)
+        private void TB_ModSup_TextChanged(object sender, EventArgs e)
         {
-            RemplirDataGridViewDepartement();
+            if(TB_ModSup.Text == "")
+            {
+                btn_Modifier.Enabled = false;
+                btn_Supprimer.Enabled = false; 
+            }
+            else
+            {
+                btn_Modifier.Enabled = true;
+                btn_Supprimer.Enabled = true; 
+            }
         }
     }
 }
