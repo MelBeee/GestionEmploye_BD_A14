@@ -141,10 +141,6 @@ namespace TP2_Sql
             dlg.Text = (TB_ModSup.Text == "" ? "Nouveau" : "Modification");
         }
 
-        private void DGV_Departement_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void RemplirDataGridViewDepartement()
         {

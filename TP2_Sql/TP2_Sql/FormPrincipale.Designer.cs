@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_Ajouter = new System.Windows.Forms.Button();
             this.btn_Supprimer = new System.Windows.Forms.Button();
             this.btn_Modifier = new System.Windows.Forms.Button();
@@ -98,7 +99,7 @@
             // 
             // btn_Rechercher
             // 
-            this.btn_Rechercher.Location = new System.Drawing.Point(430, 115);
+            this.btn_Rechercher.Location = new System.Drawing.Point(444, 109);
             this.btn_Rechercher.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Rechercher.Name = "btn_Rechercher";
             this.btn_Rechercher.Size = new System.Drawing.Size(74, 27);
@@ -136,7 +137,7 @@
             // 
             // BTN_Suivant
             // 
-            this.BTN_Suivant.Location = new System.Drawing.Point(473, 330);
+            this.BTN_Suivant.Location = new System.Drawing.Point(484, 330);
             this.BTN_Suivant.Name = "BTN_Suivant";
             this.BTN_Suivant.Size = new System.Drawing.Size(75, 23);
             this.BTN_Suivant.TabIndex = 12;
@@ -145,7 +146,7 @@
             // 
             // BTN_Precedant
             // 
-            this.BTN_Precedant.Location = new System.Drawing.Point(392, 330);
+            this.BTN_Precedant.Location = new System.Drawing.Point(403, 330);
             this.BTN_Precedant.Name = "BTN_Precedant";
             this.BTN_Precedant.Size = new System.Drawing.Size(75, 23);
             this.BTN_Precedant.TabIndex = 11;
@@ -173,7 +174,7 @@
             this.GB_Employe.Margin = new System.Windows.Forms.Padding(2);
             this.GB_Employe.Name = "GB_Employe";
             this.GB_Employe.Padding = new System.Windows.Forms.Padding(2);
-            this.GB_Employe.Size = new System.Drawing.Size(210, 176);
+            this.GB_Employe.Size = new System.Drawing.Size(229, 176);
             this.GB_Employe.TabIndex = 13;
             this.GB_Employe.TabStop = false;
             this.GB_Employe.Text = " Employé (X résultats)";
@@ -181,7 +182,7 @@
             // LB_Adresse
             // 
             this.LB_Adresse.AutoSize = true;
-            this.LB_Adresse.Location = new System.Drawing.Point(88, 141);
+            this.LB_Adresse.Location = new System.Drawing.Point(91, 141);
             this.LB_Adresse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LB_Adresse.Name = "LB_Adresse";
             this.LB_Adresse.Size = new System.Drawing.Size(114, 13);
@@ -191,7 +192,7 @@
             // LB_Dep
             // 
             this.LB_Dep.AutoSize = true;
-            this.LB_Dep.Location = new System.Drawing.Point(88, 123);
+            this.LB_Dep.Location = new System.Drawing.Point(91, 123);
             this.LB_Dep.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LB_Dep.Name = "LB_Dep";
             this.LB_Dep.Size = new System.Drawing.Size(113, 13);
@@ -201,7 +202,7 @@
             // LB_Salaire
             // 
             this.LB_Salaire.AutoSize = true;
-            this.LB_Salaire.Location = new System.Drawing.Point(88, 106);
+            this.LB_Salaire.Location = new System.Drawing.Point(91, 106);
             this.LB_Salaire.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LB_Salaire.Name = "LB_Salaire";
             this.LB_Salaire.Size = new System.Drawing.Size(37, 13);
@@ -211,7 +212,7 @@
             // LB_Echelon
             // 
             this.LB_Echelon.AutoSize = true;
-            this.LB_Echelon.Location = new System.Drawing.Point(88, 87);
+            this.LB_Echelon.Location = new System.Drawing.Point(91, 87);
             this.LB_Echelon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LB_Echelon.Name = "LB_Echelon";
             this.LB_Echelon.Size = new System.Drawing.Size(13, 13);
@@ -221,7 +222,7 @@
             // LB_Nom
             // 
             this.LB_Nom.AutoSize = true;
-            this.LB_Nom.Location = new System.Drawing.Point(88, 69);
+            this.LB_Nom.Location = new System.Drawing.Point(91, 69);
             this.LB_Nom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LB_Nom.Name = "LB_Nom";
             this.LB_Nom.Size = new System.Drawing.Size(27, 13);
@@ -231,7 +232,7 @@
             // LB_Prenom
             // 
             this.LB_Prenom.AutoSize = true;
-            this.LB_Prenom.Location = new System.Drawing.Point(88, 51);
+            this.LB_Prenom.Location = new System.Drawing.Point(91, 51);
             this.LB_Prenom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LB_Prenom.Name = "LB_Prenom";
             this.LB_Prenom.Size = new System.Drawing.Size(30, 13);
@@ -241,7 +242,7 @@
             // LB_Numemp
             // 
             this.LB_Numemp.AutoSize = true;
-            this.LB_Numemp.Location = new System.Drawing.Point(88, 32);
+            this.LB_Numemp.Location = new System.Drawing.Point(91, 32);
             this.LB_Numemp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LB_Numemp.Name = "LB_Numemp";
             this.LB_Numemp.Size = new System.Drawing.Size(19, 13);
@@ -253,7 +254,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(32, 141);
+            this.label8.Location = new System.Drawing.Point(35, 141);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 13);
@@ -264,7 +265,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(10, 123);
+            this.label7.Location = new System.Drawing.Point(13, 123);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(74, 13);
@@ -275,7 +276,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(38, 106);
+            this.label6.Location = new System.Drawing.Point(41, 106);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(45, 13);
@@ -286,7 +287,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(33, 87);
+            this.label5.Location = new System.Drawing.Point(36, 87);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 13);
@@ -297,7 +298,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(50, 69);
+            this.label4.Location = new System.Drawing.Point(53, 69);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
@@ -308,7 +309,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(34, 51);
+            this.label3.Location = new System.Drawing.Point(37, 51);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
@@ -319,7 +320,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(28, 32);
+            this.label2.Location = new System.Drawing.Point(31, 32);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 13);
@@ -339,6 +340,14 @@
             this.CodeDep,
             this.NomDep,
             this.NbrEmp});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(220)))), ((int)(((byte)(100)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.DarkOliveGreen;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGV_Departement.DefaultCellStyle = dataGridViewCellStyle1;
             this.DGV_Departement.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(225)))), ((int)(((byte)(125)))));
             this.DGV_Departement.Location = new System.Drawing.Point(362, 10);
             this.DGV_Departement.Margin = new System.Windows.Forms.Padding(2);
@@ -347,36 +356,38 @@
             this.DGV_Departement.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.DGV_Departement.RowHeadersVisible = false;
             this.DGV_Departement.RowTemplate.Height = 24;
-            this.DGV_Departement.Size = new System.Drawing.Size(210, 91);
+            this.DGV_Departement.Size = new System.Drawing.Size(229, 91);
             this.DGV_Departement.TabIndex = 14;
-            this.DGV_Departement.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Departement_CellContentClick);
             // 
             // CodeDep
             // 
+            this.CodeDep.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.CodeDep.HeaderText = "Code";
             this.CodeDep.MaxInputLength = 4;
             this.CodeDep.Name = "CodeDep";
             this.CodeDep.ReadOnly = true;
             this.CodeDep.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.CodeDep.Width = 62;
+            this.CodeDep.Width = 40;
             // 
             // NomDep
             // 
+            this.NomDep.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.NomDep.HeaderText = "Nom Dép";
             this.NomDep.MaxInputLength = 50;
             this.NomDep.Name = "NomDep";
             this.NomDep.ReadOnly = true;
             this.NomDep.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.NomDep.Width = 155;
+            this.NomDep.Width = 120;
             // 
             // NbrEmp
             // 
+            this.NbrEmp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.NbrEmp.HeaderText = "NbEmp";
             this.NbrEmp.MaxInputLength = 3;
             this.NbrEmp.Name = "NbrEmp";
             this.NbrEmp.ReadOnly = true;
             this.NbrEmp.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.NbrEmp.Width = 60;
+            this.NbrEmp.Width = 48;
             // 
             // pictureBox1
             // 
@@ -406,7 +417,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(237)))), ((int)(((byte)(137)))));
-            this.ClientSize = new System.Drawing.Size(593, 368);
+            this.ClientSize = new System.Drawing.Size(606, 368);
             this.Controls.Add(this.BTN_Refresh);
             this.Controls.Add(this.DGV_Departement);
             this.Controls.Add(this.GB_Employe);
