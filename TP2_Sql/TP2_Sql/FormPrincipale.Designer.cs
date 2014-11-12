@@ -334,7 +334,6 @@
             this.DGV_Departement.AllowUserToResizeColumns = false;
             this.DGV_Departement.AllowUserToResizeRows = false;
             this.DGV_Departement.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(220)))), ((int)(((byte)(100)))));
-            this.DGV_Departement.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.DGV_Departement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Departement.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CodeDep,
@@ -351,11 +350,13 @@
             this.DGV_Departement.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(225)))), ((int)(((byte)(125)))));
             this.DGV_Departement.Location = new System.Drawing.Point(362, 10);
             this.DGV_Departement.Margin = new System.Windows.Forms.Padding(2);
+            this.DGV_Departement.MultiSelect = false;
             this.DGV_Departement.Name = "DGV_Departement";
             this.DGV_Departement.ReadOnly = true;
             this.DGV_Departement.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.DGV_Departement.RowHeadersVisible = false;
             this.DGV_Departement.RowTemplate.Height = 24;
+            this.DGV_Departement.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Departement.Size = new System.Drawing.Size(229, 91);
             this.DGV_Departement.TabIndex = 14;
             // 
