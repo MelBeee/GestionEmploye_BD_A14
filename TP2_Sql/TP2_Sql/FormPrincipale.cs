@@ -236,5 +236,10 @@ namespace TP2_Sql
                 btn_Ajouter.Enabled = false;
             }
         }
+
+        private void LB_test_Click(object sender, EventArgs e)
+        {
+            LB_test.Text = Properties.Settings.Default.empno.ToString();
+        }
     }
 }
