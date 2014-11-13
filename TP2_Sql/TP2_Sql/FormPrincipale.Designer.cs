@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_Ajouter = new System.Windows.Forms.Button();
             this.btn_Supprimer = new System.Windows.Forms.Button();
             this.btn_Modifier = new System.Windows.Forms.Button();
@@ -58,6 +58,7 @@
             this.NomDep = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NbrEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.LB_test = new System.Windows.Forms.Label();
             this.GB_Employe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Departement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -339,14 +340,14 @@
             this.CodeDep,
             this.NomDep,
             this.NbrEmp});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(220)))), ((int)(((byte)(100)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightYellow;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.DarkOliveGreen;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGV_Departement.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(220)))), ((int)(((byte)(100)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.DarkOliveGreen;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGV_Departement.DefaultCellStyle = dataGridViewCellStyle1;
             this.DGV_Departement.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(225)))), ((int)(((byte)(125)))));
             this.DGV_Departement.Location = new System.Drawing.Point(362, 10);
             this.DGV_Departement.Margin = new System.Windows.Forms.Padding(2);
@@ -403,12 +404,22 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // LB_test
+            // 
+            this.LB_test.AutoSize = true;
+            this.LB_test.Location = new System.Drawing.Point(25, 270);
+            this.LB_test.Name = "LB_test";
+            this.LB_test.Size = new System.Drawing.Size(35, 13);
+            this.LB_test.TabIndex = 15;
+            this.LB_test.Text = "label9";
+            // 
             // FormPrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(237)))), ((int)(((byte)(137)))));
             this.ClientSize = new System.Drawing.Size(606, 368);
+            this.Controls.Add(this.LB_test);
             this.Controls.Add(this.DGV_Departement);
             this.Controls.Add(this.GB_Employe);
             this.Controls.Add(this.BTN_Precedant);
@@ -467,5 +478,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CodeDep;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomDep;
         private System.Windows.Forms.DataGridViewTextBoxColumn NbrEmp;
+        private System.Windows.Forms.Label LB_test;
     }
 }

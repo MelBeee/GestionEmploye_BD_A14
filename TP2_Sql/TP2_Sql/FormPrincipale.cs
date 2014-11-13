@@ -104,8 +104,11 @@ namespace TP2_Sql
 
             if(dlg.ShowDialog() == DialogResult.OK)
             {
-
+                //sql += Properties.Settings.Default.CommandeSelect;
+                LB_test.Text = sql.ToString(); 
             }
+
+            
         }
 
         private void btn_Ajouter_Click(object sender, EventArgs e)
