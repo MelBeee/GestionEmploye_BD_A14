@@ -16,12 +16,6 @@ namespace TP2_Sql
         {
             InitializeComponent();
         }
-
-        int PosExtX = 185;
-        int PosExtY = 300;
-        int PosIntX = 140; // 139; 40
-        int PosIntY = 40;
-
         private void Recherche_Load(object sender, EventArgs e)
         {
             VerifierChoix();
@@ -62,8 +56,8 @@ namespace TP2_Sql
             if (RBTN_Tout.Checked)
             {
                 LB_Text.Text = "";
-                TB_Nom.Location = new Point(PosExtX, PosExtY);
-                CB_Dep.Location = new Point(PosExtX, PosExtY);
+                TB_Nom.Visible = false; 
+                CB_Dep.Visible = false; 
                 TB_Nom.Text = "";
             }
             VerifierChoix();
@@ -72,16 +66,16 @@ namespace TP2_Sql
         private void RBTN_Nom_CheckedChanged(object sender, EventArgs e)
         {
             LB_Text.Text = "Nom de l'Employé";
-            TB_Nom.Location = new Point(PosIntX, PosIntY);
-            CB_Dep.Location = new Point(PosExtX, PosExtY);
+            TB_Nom.Visible = true;
+            CB_Dep.Visible = false; 
             VerifierChoix();
         }
 
         private void RBTN_Dep_CheckedChanged(object sender, EventArgs e)
         {
             LB_Text.Text = "Département";
-            TB_Nom.Location = new Point(PosExtX, PosExtY);
-            CB_Dep.Location = new Point(PosIntX, PosIntY);
+            TB_Nom.Visible = false;
+            CB_Dep.Visible = true; 
             TB_Nom.Text = "";
             VerifierChoix();
             CB_Dep.SelectedItem = 0; 

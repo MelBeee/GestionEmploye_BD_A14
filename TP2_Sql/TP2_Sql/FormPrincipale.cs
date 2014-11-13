@@ -110,6 +110,7 @@ namespace TP2_Sql
         private void btn_Ajouter_Click(object sender, EventArgs e)
         {
             AjouterModifier();
+            RemplirDataGridViewDepartement();
         }
 
         private void btn_Modifier_Click(object sender, EventArgs e)
@@ -122,6 +123,8 @@ namespace TP2_Sql
             string sql;
 
             sql = "";
+
+            RemplirDataGridViewDepartement();
         }
 
         private void AjouterModifier()
