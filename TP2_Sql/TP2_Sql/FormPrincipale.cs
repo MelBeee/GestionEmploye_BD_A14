@@ -129,18 +129,6 @@ namespace TP2_Sql
             RemplirDataGridViewDepartement();
         }
 
-        private void Ajouter()
-        {
-            AjouterModifier dlg = new AjouterModifier();
-
-            if (TB_ModSup.Text == "")
-            {
-                dlg.Show();
-            }
-
-            dlg.Text = "Nouveau";
-        }
-
         private bool EmpnoValide(string empno)
         {
             bool valide = false;
@@ -151,8 +139,7 @@ namespace TP2_Sql
 
             if (oraRead.Read())
             {
-                valide = true;
-                Properties.Settings.Default.empno = oraRead.GetInt32(0);
+                valide = true;                
             }
             else
             {
@@ -161,24 +148,26 @@ namespace TP2_Sql
             return valide;
         }
 
+        private void Ajouter()
+        {
+            AjouterModifier dlg = new AjouterModifier();
+            dlg.Show();
+            dlg.Text = "Nouveau";
+        }
+
         private void Modifier()
         {
-            
             AjouterModifier dlg = new AjouterModifier();
-
-            if(EmpnoValide(TB_ModSup.Text))
+            if (EmpnoValide(TB_ModSup.Text))
             {
-                LB_test.Text = "abc";
+                Properties.Settings.Default.empno = Convert.ToInt32(TB_ModSup.Text);
+                dlg.Show();
             }
             else
             {
-                TB_ModSup.Text="";
+                Properties.Settings.Default.empno = -1;
+                TB_ModSup.Text = "";
             }
-
-            //if (oraRead.GetString(0) == TB_ModSup.Text)
-            //{
-            //    //dlg.Show();
-            //}
 
             dlg.Text = "Modification";
         }
@@ -187,7 +176,7 @@ namespace TP2_Sql
         {
             if (EmpnoValide(TB_ModSup.Text))
             {
-                LB_test.Text = "abc";
+                LB_test.Text = "supprime";
             }
             else
             {
