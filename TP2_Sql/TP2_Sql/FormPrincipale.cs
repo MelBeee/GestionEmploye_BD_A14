@@ -109,13 +109,14 @@ namespace TP2_Sql
 
         private void btn_Ajouter_Click(object sender, EventArgs e)
         {
-            AjouterModifier();
+            Ajouter();
             RemplirDataGridViewDepartement();
         }
 
         private void btn_Modifier_Click(object sender, EventArgs e)
         {
-            AjouterModifier();
+            Modifier();
+            RemplirDataGridViewDepartement();
         }
 
         private void btn_Supprimer_Click(object sender, EventArgs e)
@@ -127,22 +128,36 @@ namespace TP2_Sql
             RemplirDataGridViewDepartement();
         }
 
-        private void AjouterModifier()
+        private void Ajouter()
         {
-            AjouterModifier dlg = new AjouterModifier(); 
+            AjouterModifier dlg = new AjouterModifier();
 
             if (TB_ModSup.Text == "")
             {
                 dlg.Show();
             }
-            else
-            {
-                
-            }
 
-            dlg.Text = (TB_ModSup.Text == "" ? "Nouveau" : "Modification");
+            dlg.Text = "Nouveau";
         }
 
+        private void Modifier()
+        {
+            string sql = "select empno from employes where empno = " + TB_ModSup.Text;
+            AjouterModifier dlg = new AjouterModifier();
+
+            OracleCommand orcd = new OracleCommand(sql, oraconn);
+            orcd.CommandType = CommandType.Text;
+            OracleDataReader oraRead = orcd.ExecuteReader();
+
+            label9.Text = oraRead.GetInt32(0).ToString();
+
+            if (oraRead.GetString(0) == TB_ModSup.Text)
+            {
+                //dlg.Show();
+            }
+
+            dlg.Text = "Modification";
+        }
 
         private void RemplirDataGridViewDepartement()
         {
@@ -186,12 +201,14 @@ namespace TP2_Sql
             if(TB_ModSup.Text == "")
             {
                 btn_Modifier.Enabled = false;
-                btn_Supprimer.Enabled = false; 
+                btn_Supprimer.Enabled = false;
+                btn_Ajouter.Enabled = true;
             }
             else
             {
                 btn_Modifier.Enabled = true;
-                btn_Supprimer.Enabled = true; 
+                btn_Supprimer.Enabled = true;
+                btn_Ajouter.Enabled = false;
             }
         }
     }
