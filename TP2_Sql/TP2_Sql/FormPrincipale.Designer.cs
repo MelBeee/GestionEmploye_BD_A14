@@ -112,6 +112,7 @@
             // 
             this.TB_ModSup.Location = new System.Drawing.Point(31, 161);
             this.TB_ModSup.Margin = new System.Windows.Forms.Padding(2);
+            this.TB_ModSup.MaxLength = 6;
             this.TB_ModSup.Name = "TB_ModSup";
             this.TB_ModSup.Size = new System.Drawing.Size(76, 20);
             this.TB_ModSup.TabIndex = 8;

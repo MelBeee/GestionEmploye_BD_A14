@@ -73,10 +73,10 @@ namespace TP2_Sql.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string empno {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int empno {
             get {
-                return ((string)(this["empno"]));
+                return ((int)(this["empno"]));
             }
             set {
                 this["empno"] = value;

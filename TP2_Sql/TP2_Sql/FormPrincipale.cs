@@ -76,7 +76,7 @@ namespace TP2_Sql
                     RemplirDataGridViewDepartement();
                 }
             }
-            else 
+            else
             {
                 oraconn.Close();
                 pictureBox1.BackgroundImage = Properties.Resources.Deconnecter;
@@ -102,13 +102,13 @@ namespace TP2_Sql
             string sql = "select * from employes ";
             Recherche dlg = new Recherche();
 
-            if(dlg.ShowDialog() == DialogResult.OK)
+            if (dlg.ShowDialog() == DialogResult.OK)
             {
                 //sql += Properties.Settings.Default.CommandeSelect;
-                LB_test.Text = sql.ToString(); 
+                LB_test.Text = sql.ToString();
             }
 
-            
+
         }
 
         private void btn_Ajouter_Click(object sender, EventArgs e)
@@ -125,10 +125,7 @@ namespace TP2_Sql
 
         private void btn_Supprimer_Click(object sender, EventArgs e)
         {
-            string sql;
-
-            sql = "";
-
+            Supprimer();
             RemplirDataGridViewDepartement();
         }
 
@@ -144,36 +141,71 @@ namespace TP2_Sql
             dlg.Text = "Nouveau";
         }
 
-        private void Modifier()
+        private bool EmpnoValide(string empno)
         {
-            string sql = "select empno from employes where empno = " + TB_ModSup.Text;
-            AjouterModifier dlg = new AjouterModifier();
-
+            bool valide = false;
+            string sql = "select empno from employes where empno = " + empno;
             OracleCommand orcd = new OracleCommand(sql, oraconn);
             orcd.CommandType = CommandType.Text;
             OracleDataReader oraRead = orcd.ExecuteReader();
 
-            label9.Text = oraRead.GetInt32(0).ToString();
-
-            if (oraRead.GetString(0) == TB_ModSup.Text)
+            if (oraRead.Read())
             {
-                //dlg.Show();
+                valide = true;
+                Properties.Settings.Default.empno = oraRead.GetInt32(0);
+            }
+            else
+            {
+                MessageBox.Show("Numéro d'employé invalide");
+            }
+            return valide;
+        }
+
+        private void Modifier()
+        {
+            
+            AjouterModifier dlg = new AjouterModifier();
+
+            if(EmpnoValide(TB_ModSup.Text))
+            {
+                LB_test.Text = "abc";
+            }
+            else
+            {
+                TB_ModSup.Text="";
             }
 
+            //if (oraRead.GetString(0) == TB_ModSup.Text)
+            //{
+            //    //dlg.Show();
+            //}
+
             dlg.Text = "Modification";
+        }
+
+        private void Supprimer()
+        {
+            if (EmpnoValide(TB_ModSup.Text))
+            {
+                LB_test.Text = "abc";
+            }
+            else
+            {
+                TB_ModSup.Text = "";
+            }
         }
 
         private void RemplirDataGridViewDepartement()
         {
             DGV_Departement.Rows.Clear();
-            string sql = "select e.codedep, d.nomdepartement " + ", count(e.codedep) " + 
+            string sql = "select e.codedep, d.nomdepartement " + ", count(e.codedep) " +
                          "from employes e " +
                          "inner join departements d on e.codedep = d.codedep " +
                          "group by e.codedep, d.nomdepartement " +
                          "order by e.codedep ";
             // code nomdep numemp
 
-            
+
 
             //string sql = "select codedep, nomdepartement from departements"; 
             try
@@ -202,7 +234,7 @@ namespace TP2_Sql
 
         private void TB_ModSup_TextChanged(object sender, EventArgs e)
         {
-            if(TB_ModSup.Text == "")
+            if (TB_ModSup.Text == "")
             {
                 btn_Modifier.Enabled = false;
                 btn_Supprimer.Enabled = false;
