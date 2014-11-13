@@ -99,12 +99,16 @@ namespace TP2_Sql
 
         private void btn_Rechercher_Click(object sender, EventArgs e)
         {
+            string sql = "select * from employes ";
             Recherche dlg = new Recherche();
 
             if(dlg.ShowDialog() == DialogResult.OK)
             {
-
+                //sql += Properties.Settings.Default.CommandeSelect;
+                LB_test.Text = sql.ToString(); 
             }
+
+            
         }
 
         private void btn_Ajouter_Click(object sender, EventArgs e)

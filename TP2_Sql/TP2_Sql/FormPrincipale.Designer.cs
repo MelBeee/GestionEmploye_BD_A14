@@ -58,7 +58,7 @@
             this.NomDep = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NbrEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.LB_test = new System.Windows.Forms.Label();
             this.GB_Employe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Departement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -404,14 +404,14 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // label9
+            // LB_test
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(48, 216);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "label9";
+            this.LB_test.AutoSize = true;
+            this.LB_test.Location = new System.Drawing.Point(25, 270);
+            this.LB_test.Name = "LB_test";
+            this.LB_test.Size = new System.Drawing.Size(35, 13);
+            this.LB_test.TabIndex = 15;
+            this.LB_test.Text = "label9";
             // 
             // FormPrincipale
             // 
@@ -419,7 +419,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(237)))), ((int)(((byte)(137)))));
             this.ClientSize = new System.Drawing.Size(606, 368);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.LB_test);
             this.Controls.Add(this.DGV_Departement);
             this.Controls.Add(this.GB_Employe);
             this.Controls.Add(this.BTN_Precedant);
@@ -478,6 +478,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CodeDep;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomDep;
         private System.Windows.Forms.DataGridViewTextBoxColumn NbrEmp;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label LB_test;
     }
 }
