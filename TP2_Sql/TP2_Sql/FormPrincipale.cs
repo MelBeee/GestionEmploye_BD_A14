@@ -15,6 +15,8 @@ namespace TP2_Sql
     {
         public bool connection = false;
         private OracleConnection oraconn = new OracleConnection();
+        private DataSet monDataSet = new DataSet();
+
 
         public FormPrincipale()
         {
@@ -30,12 +32,16 @@ namespace TP2_Sql
                 btn_Rechercher.Enabled = false;
                 btn_Supprimer.Enabled = false;
                 TB_ModSup.Enabled = false;
+                BTN_Precedant.Enabled = false;
+                BTN_Suivant.Enabled = false;
             }
             else
             {
                 btn_Ajouter.Enabled = true;
                 btn_Rechercher.Enabled = true;
                 TB_ModSup.Enabled = true;
+                BTN_Precedant.Enabled = true;
+                BTN_Suivant.Enabled = true;
             }
         }
 
@@ -104,11 +110,49 @@ namespace TP2_Sql
 
             if (dlg.ShowDialog() == DialogResult.OK)
             {
-                //sql += Properties.Settings.Default.CommandeSelect;
+                sql += Properties.Settings.Default.CommandeSelect;
                 LB_test.Text = sql.ToString();
+                monDataSet.Clear();
+                RemplirLabels(sql);
             }
+        }
 
+        public void RemplirLabels(string sql)
+        {
+            try
+            {
+                monDataSet.Clear();
+                OracleDataAdapter dataAdapter = new OracleDataAdapter();
+                OracleCommand commandeSql = new OracleCommand();
+                dataAdapter.SelectCommand = new OracleCommand(sql, oraconn);
+                monDataSet = new DataSet("Employes");
+                dataAdapter.Fill(monDataSet, "Employes");
+                if(this.BindingContext[monDataSet, "Employes"].Count > 0)
+                {
+                    GB_Employe.Text = "Employé (" + this.BindingContext[monDataSet, "Employes"].Count.ToString() + " résultats)";
+                    InitLabels();                       
+                }
+                else
+                {
+                    MessageBox.Show("Erreur dans le remplissage des informations");
+                }
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+        }
+
+        private void InitLabels()
+        {
+            LB_Numemp.DataBindings.Add("Text", monDataSet, "Employes.Empno");
+            LB_Nom.DataBindings.Add("Text", monDataSet, "Employes.Nom");
+            LB_Prenom.DataBindings.Add("Text", monDataSet, "Employes.Prenom");
+            LB_Adresse.DataBindings.Add("Text", monDataSet, "Employes.Adresse");
+            LB_Echelon.DataBindings.Add("Text", monDataSet, "Employes.Echelon");
+            LB_Dep.DataBindings.Add("Text", monDataSet, "Employes.CodeDep");
+            LB_Salaire.DataBindings.Add("Text", monDataSet, "Employes.Salaire");
         }
 
         private void btn_Ajouter_Click(object sender, EventArgs e)
@@ -131,7 +175,7 @@ namespace TP2_Sql
             RemplirDataGridViewDepartement();
         }
 
-        private bool EmpnoValide(string empno)// adtjaflwjefwef
+        private bool EmpnoValide(string empno)
         {
             bool valide = false;
             string sql = "select empno from employes where empno = " + empno;
@@ -147,6 +191,7 @@ namespace TP2_Sql
             {
                 MessageBox.Show("Numéro d'employé invalide");
             }
+            oraRead.Close();
             return valide;
         }
 
@@ -231,20 +276,20 @@ namespace TP2_Sql
                 Properties.Settings.Default.echelon = oraRead.GetInt32(4);
                 Properties.Settings.Default.Adresse = oraRead.GetString(5);
                 Properties.Settings.Default.codedep = oraRead.GetString(6);
-
+                oraRead.Close();
             }
             catch (OracleException ex)
             {
                 MessageBox.Show(ex.Message.ToString());
             }
+
         }
 
         private void Supprimer()
         {
             if (EmpnoValide(TB_ModSup.Text))
             {
-                LB_test.Text = "supprime";
-                string sqlcommande = "delete from employes where empno = " + TB_ModSup.Text ;
+                string sqlcommande = "delete from employes where empno = " + TB_ModSup.Text;
                 OracleCommand orcd = new OracleCommand(sqlcommande, oraconn);
                 try
                 {
@@ -255,11 +300,7 @@ namespace TP2_Sql
                 {
                     MessageBox.Show(ex.Message.ToString());
                 }
-                TB_ModSup.Text = ""; 
-            }
-            else
-            {
-                MessageBox.Show("Numero d'employé non valide");
+                TB_ModSup.Clear();
             }
         }
 
@@ -279,7 +320,6 @@ namespace TP2_Sql
                 orcd.CommandType = CommandType.Text;
                 OracleDataReader oraRead = orcd.ExecuteReader();
 
-                //label11.Text = oraRead.GetDataTypeName(2);
                 while (oraRead.Read())
                 {
                     DGV_Departement.Rows.Add(
@@ -312,9 +352,14 @@ namespace TP2_Sql
             }
         }
 
-        private void LB_test_Click(object sender, EventArgs e)
+        private void BTN_Precedant_Click(object sender, EventArgs e)
         {
-            LB_test.Text = Properties.Settings.Default.empno.ToString();
+            this.BindingContext[monDataSet, "Employes"].Position -= 1;
+        }
+
+        private void BTN_Suivant_Click(object sender, EventArgs e)
+        {
+            this.BindingContext[monDataSet, "Employes"].Position += 1;
         }
     }
 }

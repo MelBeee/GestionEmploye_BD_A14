@@ -28,7 +28,7 @@ INSERT INTO Departements VALUES('300', 'Informatique');
 INSERT INTO Departements VALUES('400', 'Administation');
 INSERT INTO Departements VALUES('500', 'Comptabilité');
 
-/*
+
 -- Departement 100
 INSERT INTO Employes VALUES(10,'Bourssio',        'Xavios',   100000, 1,  '110 Dorion, St-Eustache',    '100');
 INSERT INTO Employes VALUES(11,'Of CSharp',       'Queen',    100000, 2,  '120 Vaillant, Terrebonne',   '100');
@@ -44,8 +44,6 @@ INSERT INTO Employes VALUES(17,'Syvestio',        'Davyd',    25000,  9,  '180 V
 -- Departement 500
 INSERT INTO Employes VALUES(18,'Clémentine',      'Dominique',90000,  3,  '190 Beriot, Boisbriand',     '500');
 INSERT INTO Employes VALUES(19,'Enfant',          'Alexiss',  50000,  10, '200 Delage, Mont-Tremblant', '500');
-*/
-//--- UPDATE EMPLOYES SET ADRESSE = 'BLABLA,   65RTU', ECHELON = 1, SALAIRE = 25000 WHERE EMPNO = 1;
 
 SELECT * FROM EMPLOYES; 
 

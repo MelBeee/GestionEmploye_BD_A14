@@ -35,7 +35,7 @@ namespace TP2_Sql
                 if (TB_Nom.Text != "")
                 {
                     BTN_Ok.Enabled = true;
-                    Properties.Settings.Default.CommandeSelect = "where name like '" + TB_Nom.Text + "%'";
+                    Properties.Settings.Default.CommandeSelect = "where nom like '" + TB_Nom.Text + "%'";
                 }
             }
             else if (RBTN_Dep.Checked)

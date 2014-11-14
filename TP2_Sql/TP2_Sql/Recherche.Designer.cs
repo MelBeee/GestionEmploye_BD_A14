@@ -79,7 +79,7 @@
             // 
             // BTN_Ok
             // 
-            this.BTN_Ok.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BTN_Ok.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.BTN_Ok.Location = new System.Drawing.Point(246, 11);
             this.BTN_Ok.Margin = new System.Windows.Forms.Padding(2);
             this.BTN_Ok.Name = "BTN_Ok";

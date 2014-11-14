@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_Ajouter = new System.Windows.Forms.Button();
             this.btn_Supprimer = new System.Windows.Forms.Button();
             this.btn_Modifier = new System.Windows.Forms.Button();
@@ -145,6 +145,7 @@
             this.BTN_Suivant.TabIndex = 12;
             this.BTN_Suivant.Text = "Suivant";
             this.BTN_Suivant.UseVisualStyleBackColor = true;
+            this.BTN_Suivant.Click += new System.EventHandler(this.BTN_Suivant_Click);
             // 
             // BTN_Precedant
             // 
@@ -154,6 +155,7 @@
             this.BTN_Precedant.TabIndex = 11;
             this.BTN_Precedant.Text = "Précédant";
             this.BTN_Precedant.UseVisualStyleBackColor = true;
+            this.BTN_Precedant.Click += new System.EventHandler(this.BTN_Precedant_Click);
             // 
             // GB_Employe
             // 
@@ -341,14 +343,14 @@
             this.CodeDep,
             this.NomDep,
             this.NbrEmp});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(220)))), ((int)(((byte)(100)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightYellow;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.DarkOliveGreen;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGV_Departement.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(220)))), ((int)(((byte)(100)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.DarkOliveGreen;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGV_Departement.DefaultCellStyle = dataGridViewCellStyle3;
             this.DGV_Departement.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(225)))), ((int)(((byte)(125)))));
             this.DGV_Departement.Location = new System.Drawing.Point(362, 10);
             this.DGV_Departement.Margin = new System.Windows.Forms.Padding(2);
@@ -408,12 +410,11 @@
             // LB_test
             // 
             this.LB_test.AutoSize = true;
-            this.LB_test.Location = new System.Drawing.Point(280, 208);
+            this.LB_test.Location = new System.Drawing.Point(219, 116);
             this.LB_test.Name = "LB_test";
             this.LB_test.Size = new System.Drawing.Size(35, 13);
             this.LB_test.TabIndex = 15;
             this.LB_test.Text = "label9";
-            this.LB_test.Click += new System.EventHandler(this.LB_test_Click);
             // 
             // FormPrincipale
             // 
