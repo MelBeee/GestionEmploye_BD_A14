@@ -121,7 +121,7 @@ namespace TP2_Sql
         {
             Modifier();
             RemplirDataGridViewDepartement();
-            
+
         }
 
         private void btn_Supprimer_Click(object sender, EventArgs e)
@@ -140,7 +140,7 @@ namespace TP2_Sql
 
             if (oraRead.Read())
             {
-                valide = true;                
+                valide = true;
             }
             else
             {
@@ -154,6 +154,14 @@ namespace TP2_Sql
             AjouterModifier dlg = new AjouterModifier();
             dlg.Show();
             dlg.Text = "Nouveau";
+            string sqlcommande = "INSERT INTO employes VALUES(" + Properties.Settings.Default.empno.ToString() + ",'"
+                             + Properties.Settings.Default.nom.ToString() + "','"
+                             + Properties.Settings.Default.prenom.ToString() + "',"
+                             + Properties.Settings.Default.salaire.ToString() + ","
+                             + Properties.Settings.Default.echelon.ToString() + ",'"
+                             + Properties.Settings.Default.Adresse.ToString() + "','"
+                             + Properties.Settings.Default.codedep.ToString() + "')";
+
         }
 
         private void Modifier()
@@ -162,7 +170,29 @@ namespace TP2_Sql
             if (EmpnoValide(TB_ModSup.Text))
             {
                 Properties.Settings.Default.empno = Convert.ToInt32(TB_ModSup.Text);
-                dlg.Show();
+                LoadData();
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    string sqlcommande = "UPDATE employes SET" +
+                                        "Adresse = '" + Properties.Settings.Default.Adresse.ToString() +
+                                        "', Echelon =" + Properties.Settings.Default.echelon.ToString() +
+                                        ", Salaire = " + Properties.Settings.Default.salaire.ToString() +
+                                        "WHERE empno = " +
+                                        Properties.Settings.Default.empno.ToString();
+                    try
+                    {
+                        OracleCommand orcd = new OracleCommand(sqlcommande, oraconn);
+                        orcd.CommandType = CommandType.Text;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString());
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("bdjskf");
+                }
             }
             else
             {
@@ -184,20 +214,16 @@ namespace TP2_Sql
                 orcd.CommandType = CommandType.Text;
                 OracleDataReader oraRead = orcd.ExecuteReader();
 
-                if (oraRead.Read())
-                {
-                    Properties.Settings.Default.empno = oraRead.GetInt32(0);
-                    Properties.Settings.Default.nom = oraRead.GetString(1);
-                    Properties.Settings.Default.prenom = oraRead.GetString(2);
-                    Properties.Settings.Default.salaire = oraRead.GetFloat(3);
-                    Properties.Settings.Default.echelon = oraRead.GetInt32(4);
-                    Properties.Settings.Default.Adresse = oraRead.GetString(5);
-                    Properties.Settings.Default.codedep = oraRead.GetString(6);
-                }
-                else
-                {
-                    MessageBox.Show("Numéro d'employé invalide");
-                }
+                oraRead.Read();
+
+                Properties.Settings.Default.empno = oraRead.GetInt32(0);
+                Properties.Settings.Default.nom = oraRead.GetString(1);
+                Properties.Settings.Default.prenom = oraRead.GetString(2);
+                Properties.Settings.Default.salaire = oraRead.GetFloat(3);
+                Properties.Settings.Default.echelon = oraRead.GetInt32(4);
+                Properties.Settings.Default.Adresse = oraRead.GetString(5);
+                Properties.Settings.Default.codedep = oraRead.GetString(6);
+
             }
             catch (OracleException ex)
             {

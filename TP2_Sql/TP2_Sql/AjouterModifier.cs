@@ -22,38 +22,38 @@ namespace TP2_Sql
 
         private void btn_Enregistrer_Click(object sender, EventArgs e)
         {
-            string sqlcommande;
-            if (Properties.Settings.Default.empno != -1)
-            {
-                sqlcommande = "UPDATE employes SET" +
-                                "Adresse = '" + TB_Adresse.Text +
-                                "', Echelon =" + tb_Echelon.Text +
-                                ", Salaire = " + tb_Salaire.Text +
-                                "WHERE empno = " +
-                                tb_NumEmp.Text +
-                                ";";
-            }
-            else
-            {
-                sqlcommande = "INSERT INTO employes VALUES(" + tb_NumEmp.Text + ",'"
-                                + tb_Nom.Text + "','"
-                                + tb_Prenom.Text + "',"
-                                + tb_Salaire.Text + ","
-                                + tb_Echelon.Text + ",'"
-                                + TB_Adresse.Text + "','"
-                                + tb_Dep.Text + "');";
-            }
-            try
-            {
-                OracleCommand orcd = new OracleCommand(sqlcommande, conect);
-                orcd.CommandType = CommandType.Text;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString());
-            }
+            //string sqlcommande;
+            //if (Properties.Settings.Default.empno != -1)
+            //{
+            //    sqlcommande = "UPDATE employes SET" +
+            //                    "Adresse = '" + TB_Adresse.Text +
+            //                    "', Echelon =" + tb_Echelon.Text +
+            //                    ", Salaire = " + tb_Salaire.Text +
+            //                    "WHERE empno = " +
+            //                    tb_NumEmp.Text +
+            //                    ";";
+            //}
+            //else
+            //{
+            //    sqlcommande = "INSERT INTO employes VALUES(" + tb_NumEmp.Text + ",'"
+            //                    + tb_Nom.Text + "','"
+            //                    + tb_Prenom.Text + "',"
+            //                    + tb_Salaire.Text + ","
+            //                    + tb_Echelon.Text + ",'"
+            //                    + TB_Adresse.Text + "','"
+            //                    + tb_Dep.Text + "');";
+            //}
+            //try
+            //{
+            //    OracleCommand orcd = new OracleCommand(sqlcommande, ora);
+            //    orcd.CommandType = CommandType.Text;
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message.ToString());
+            //}
 
-            Properties.Settings.Default.CommandeInsertUpdate = sqlcommande;
+            //Properties.Settings.Default.CommandeInsertUpdate = sqlcommande;
         }
 
         private void btn_Annuler_Click(object sender, EventArgs e)
@@ -113,30 +113,13 @@ namespace TP2_Sql
 
         void LoadData()
         {
-            try
-            {
-                //Commande pour afficher un employe dans le form ajouter (dans les bonnes textbox)
-                string loadSQL = "select empno, nom, prenom, salaire, echelon, adresse, codedep " +
-                    "from employes where empno = " + Properties.Settings.Default.empno.ToString();  //-- properties.settings.default.Empno au lieu du 12
-                OracleCommand orcd = new OracleCommand(loadSQL, conect);
-                orcd.CommandType = CommandType.Text;
-                OracleDataReader oraRead = orcd.ExecuteReader();
-
-                if (oraRead.Read())
-                {
-                    tb_NumEmp.Text = Properties.Settings.Default.empno.ToString();
-                    tb_Nom.Text = oraRead.GetString(1);
-                    tb_Prenom.Text = oraRead.GetString(2);
-                }
-                else
-                {
-                    MessageBox.Show("Numéro d'employé invalide");
-                }
-            }
-            catch (OracleException ex)
-            {
-                MessageBox.Show(ex.Message.ToString());
-            }
+            tb_NumEmp.Text = Properties.Settings.Default.empno.ToString();
+            tb_Nom.Text = Properties.Settings.Default.nom.ToString();
+            tb_Prenom.Text = Properties.Settings.Default.prenom.ToString();
+            tb_Salaire.Text = Properties.Settings.Default.salaire.ToString();
+            tb_Echelon.Text = Properties.Settings.Default.echelon.ToString();
+            TB_Adresse.Text = Properties.Settings.Default.Adresse.ToString();
+            tb_Dep.Text = Properties.Settings.Default.codedep.ToString();
         }
 
         private void AjouterModifier_Load(object sender, EventArgs e)
