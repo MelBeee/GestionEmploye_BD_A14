@@ -244,10 +244,22 @@ namespace TP2_Sql
             if (EmpnoValide(TB_ModSup.Text))
             {
                 LB_test.Text = "supprime";
+                string sqlcommande = "delete from employes where empno = " + TB_ModSup.Text ;
+                OracleCommand orcd = new OracleCommand(sqlcommande, oraconn);
+                try
+                {
+                    orcd.CommandType = CommandType.Text;
+                    orcd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+                TB_ModSup.Text = ""; 
             }
             else
             {
-                TB_ModSup.Text = "";
+                MessageBox.Show("Numero d'employé non valide");
             }
         }
 
