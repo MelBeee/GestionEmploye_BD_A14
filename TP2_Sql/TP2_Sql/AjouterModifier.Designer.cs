@@ -87,7 +87,7 @@
             this.tb_NumEmp.Name = "tb_NumEmp";
             this.tb_NumEmp.Size = new System.Drawing.Size(76, 20);
             this.tb_NumEmp.TabIndex = 1;
-            this.tb_NumEmp.TextChanged += new System.EventHandler(this.tb_NumEmp_TextChanged);
+            this.tb_NumEmp.TextChanged += new System.EventHandler(this.TB_Adresse_TextChanged_1);
             // 
             // tb_Echelon
             // 
@@ -96,7 +96,7 @@
             this.tb_Echelon.Name = "tb_Echelon";
             this.tb_Echelon.Size = new System.Drawing.Size(76, 20);
             this.tb_Echelon.TabIndex = 5;
-            this.tb_Echelon.TextChanged += new System.EventHandler(this.tb_Echelon_TextChanged);
+            this.tb_Echelon.TextChanged += new System.EventHandler(this.TB_Adresse_TextChanged_1);
             // 
             // label2
             // 
@@ -115,7 +115,7 @@
             this.tb_Nom.Name = "tb_Nom";
             this.tb_Nom.Size = new System.Drawing.Size(76, 20);
             this.tb_Nom.TabIndex = 2;
-            this.tb_Nom.TextChanged += new System.EventHandler(this.tb_Nom_TextChanged);
+            this.tb_Nom.TextChanged += new System.EventHandler(this.TB_Adresse_TextChanged_1);
             // 
             // label3
             // 
@@ -134,7 +134,7 @@
             this.tb_Prenom.Name = "tb_Prenom";
             this.tb_Prenom.Size = new System.Drawing.Size(76, 20);
             this.tb_Prenom.TabIndex = 3;
-            this.tb_Prenom.TextChanged += new System.EventHandler(this.tb_Prenom_TextChanged);
+            this.tb_Prenom.TextChanged += new System.EventHandler(this.TB_Adresse_TextChanged_1);
             // 
             // label4
             // 
@@ -150,10 +150,12 @@
             // 
             this.tb_Salaire.Location = new System.Drawing.Point(120, 94);
             this.tb_Salaire.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_Salaire.MaxLength = 6;
             this.tb_Salaire.Name = "tb_Salaire";
             this.tb_Salaire.Size = new System.Drawing.Size(76, 20);
             this.tb_Salaire.TabIndex = 4;
-            this.tb_Salaire.TextChanged += new System.EventHandler(this.tb_Salaire_TextChanged);
+            this.tb_Salaire.Text = "25000";
+            this.tb_Salaire.TextChanged += new System.EventHandler(this.TB_Adresse_TextChanged_1);
             // 
             // label5
             // 
@@ -172,7 +174,7 @@
             this.tb_Dep.Name = "tb_Dep";
             this.tb_Dep.Size = new System.Drawing.Size(76, 20);
             this.tb_Dep.TabIndex = 6;
-            this.tb_Dep.TextChanged += new System.EventHandler(this.tb_Dep_TextChanged);
+            this.tb_Dep.TextChanged += new System.EventHandler(this.TB_Adresse_TextChanged_1);
             // 
             // label6
             // 
@@ -201,7 +203,7 @@
             this.TB_Adresse.Name = "TB_Adresse";
             this.TB_Adresse.Size = new System.Drawing.Size(76, 20);
             this.TB_Adresse.TabIndex = 14;
-            this.TB_Adresse.TextChanged += new System.EventHandler(this.TB_Adresse_TextChanged);
+            this.TB_Adresse.TextChanged += new System.EventHandler(this.TB_Adresse_TextChanged_1);
             // 
             // AjouterModifier
             // 

@@ -22,38 +22,7 @@ namespace TP2_Sql
 
         private void btn_Enregistrer_Click(object sender, EventArgs e)
         {
-            //string sqlcommande;
-            //if (Properties.Settings.Default.empno != -1)
-            //{
-            //    sqlcommande = "UPDATE employes SET" +
-            //                    "Adresse = '" + TB_Adresse.Text +
-            //                    "', Echelon =" + tb_Echelon.Text +
-            //                    ", Salaire = " + tb_Salaire.Text +
-            //                    "WHERE empno = " +
-            //                    tb_NumEmp.Text +
-            //                    ";";
-            //}
-            //else
-            //{
-            //    sqlcommande = "INSERT INTO employes VALUES(" + tb_NumEmp.Text + ",'"
-            //                    + tb_Nom.Text + "','"
-            //                    + tb_Prenom.Text + "',"
-            //                    + tb_Salaire.Text + ","
-            //                    + tb_Echelon.Text + ",'"
-            //                    + TB_Adresse.Text + "','"
-            //                    + tb_Dep.Text + "');";
-            //}
-            //try
-            //{
-            //    OracleCommand orcd = new OracleCommand(sqlcommande, ora);
-            //    orcd.CommandType = CommandType.Text;
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message.ToString());
-            //}
-
-            //Properties.Settings.Default.CommandeInsertUpdate = sqlcommande;
+            SetData();
         }
 
         private void btn_Annuler_Click(object sender, EventArgs e)
@@ -99,16 +68,13 @@ namespace TP2_Sql
 
         private void OkEnable()
         {
-            if (tb_Dep.Text == "" &&
-                tb_Echelon.Text == "" &&
-                tb_Nom.Text == "" &&
-                tb_Prenom.Text == "" &&
-                tb_NumEmp.Text == "" &&
-                tb_Salaire.Text == "" &&
-                TB_Adresse.Text == "")
-            {
-                btn_Enregistrer.Enabled = false;
-            }
+            btn_Enregistrer.Enabled = !(tb_Dep.Text == "" ||
+                tb_Echelon.Text == "" ||
+                tb_Nom.Text == "" ||
+                tb_Prenom.Text == "" ||
+                tb_NumEmp.Text == "" ||
+                tb_Salaire.Text == "" ||
+                TB_Adresse.Text == "");
         }
 
         void LoadData()
@@ -120,6 +86,17 @@ namespace TP2_Sql
             tb_Echelon.Text = Properties.Settings.Default.echelon.ToString();
             TB_Adresse.Text = Properties.Settings.Default.Adresse.ToString();
             tb_Dep.Text = Properties.Settings.Default.codedep.ToString();
+        }
+
+        void SetData()
+        {
+            Properties.Settings.Default.empno = Convert.ToInt32(tb_NumEmp.Text);
+            Properties.Settings.Default.nom = tb_Nom.Text;
+            Properties.Settings.Default.prenom = tb_Prenom.Text;
+            Properties.Settings.Default.salaire = float.Parse(tb_Salaire.Text);
+            Properties.Settings.Default.echelon = Convert.ToInt32(tb_Echelon.Text);
+            Properties.Settings.Default.Adresse = TB_Adresse.Text;
+            Properties.Settings.Default.codedep = tb_Dep.Text;
         }
 
         private void AjouterModifier_Load(object sender, EventArgs e)
@@ -140,8 +117,12 @@ namespace TP2_Sql
                 tb_Prenom.Enabled = true;
                 tb_Dep.Enabled = true;
             }
+            OkEnable();
         }
 
-
+        private void TB_Adresse_TextChanged_1(object sender, EventArgs e)
+        {
+            OkEnable();
+        }
     }
 }

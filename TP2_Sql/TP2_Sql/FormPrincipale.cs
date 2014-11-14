@@ -115,6 +115,7 @@ namespace TP2_Sql
         {
             Ajouter();
             RemplirDataGridViewDepartement();
+            Properties.Settings.Default.empno = -1;
         }
 
         private void btn_Modifier_Click(object sender, EventArgs e)
@@ -152,16 +153,27 @@ namespace TP2_Sql
         private void Ajouter()
         {
             AjouterModifier dlg = new AjouterModifier();
-            dlg.Show();
-            dlg.Text = "Nouveau";
-            string sqlcommande = "INSERT INTO employes VALUES(" + Properties.Settings.Default.empno.ToString() + ",'"
-                             + Properties.Settings.Default.nom.ToString() + "','"
-                             + Properties.Settings.Default.prenom.ToString() + "',"
-                             + Properties.Settings.Default.salaire.ToString() + ","
-                             + Properties.Settings.Default.echelon.ToString() + ",'"
-                             + Properties.Settings.Default.Adresse.ToString() + "','"
-                             + Properties.Settings.Default.codedep.ToString() + "')";
-
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                dlg.Text = "Nouveau";
+                string sqlcommande = "INSERT INTO employes VALUES(" + Properties.Settings.Default.empno.ToString() + ",'"
+                                 + Properties.Settings.Default.nom.ToString() + "','"
+                                 + Properties.Settings.Default.prenom.ToString() + "',"
+                                 + Properties.Settings.Default.salaire.ToString() + ","
+                                 + Properties.Settings.Default.echelon.ToString() + ",'"
+                                 + Properties.Settings.Default.Adresse.ToString() + "','"
+                                 + Properties.Settings.Default.codedep.ToString() + "')";
+                OracleCommand orcd = new OracleCommand(sqlcommande, oraconn);
+                try
+                {
+                    orcd.CommandType = CommandType.Text;
+                    orcd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
         }
 
         private void Modifier()
@@ -171,27 +183,24 @@ namespace TP2_Sql
             {
                 Properties.Settings.Default.empno = Convert.ToInt32(TB_ModSup.Text);
                 LoadData();
+
                 if (dlg.ShowDialog() == DialogResult.OK)
                 {
-                    string sqlcommande = "UPDATE employes SET" +
+                    string sqlcommande = "UPDATE employes SET " +
                                         "Adresse = '" + Properties.Settings.Default.Adresse.ToString() +
                                         "', Echelon =" + Properties.Settings.Default.echelon.ToString() +
                                         ", Salaire = " + Properties.Settings.Default.salaire.ToString() +
-                                        "WHERE empno = " +
-                                        Properties.Settings.Default.empno.ToString();
+                                        " WHERE empno = " + Properties.Settings.Default.empno.ToString();
+                    OracleCommand orcd = new OracleCommand(sqlcommande, oraconn);
                     try
                     {
-                        OracleCommand orcd = new OracleCommand(sqlcommande, oraconn);
                         orcd.CommandType = CommandType.Text;
+                        orcd.ExecuteNonQuery();
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.Message.ToString());
                     }
-                }
-                else
-                {
-                    MessageBox.Show("bdjskf");
                 }
             }
             else
@@ -216,7 +225,6 @@ namespace TP2_Sql
 
                 oraRead.Read();
 
-                Properties.Settings.Default.empno = oraRead.GetInt32(0);
                 Properties.Settings.Default.nom = oraRead.GetString(1);
                 Properties.Settings.Default.prenom = oraRead.GetString(2);
                 Properties.Settings.Default.salaire = oraRead.GetFloat(3);
@@ -246,11 +254,11 @@ namespace TP2_Sql
         private void RemplirDataGridViewDepartement()
         {
             DGV_Departement.Rows.Clear();
-            string sql = "select e.codedep, d.nomdepartement " + ", count(e.codedep) " +
+            string sql = "select d.codedep, d.nomdepartement " + ", count(e.codedep) " +
                          "from employes e " +
-                         "inner join departements d on e.codedep = d.codedep " +
-                         "group by e.codedep, d.nomdepartement " +
-                         "order by e.codedep ";
+                         "right join departements d on e.codedep = d.codedep " +
+                         "group by d.codedep, d.nomdepartement " +
+                         "order by d.codedep ";
 
             try
             {
