@@ -130,7 +130,7 @@ namespace TP2_Sql
             RemplirDataGridViewDepartement();
         }
 
-        private bool EmpnoValide(string empno)
+        private bool EmpnoValide(string empno)// adtjaflwjefwef
         {
             bool valide = false;
             string sql = "select empno from employes where empno = " + empno;

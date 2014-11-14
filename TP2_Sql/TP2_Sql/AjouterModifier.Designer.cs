@@ -50,7 +50,7 @@
             // 
             this.btn_Enregistrer.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_Enregistrer.Location = new System.Drawing.Point(45, 210);
-            this.btn_Enregistrer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Enregistrer.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Enregistrer.Name = "btn_Enregistrer";
             this.btn_Enregistrer.Size = new System.Drawing.Size(70, 27);
             this.btn_Enregistrer.TabIndex = 0;
@@ -62,7 +62,7 @@
             // 
             this.btn_Annuler.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_Annuler.Location = new System.Drawing.Point(120, 210);
-            this.btn_Annuler.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Annuler.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Annuler.Name = "btn_Annuler";
             this.btn_Annuler.Size = new System.Drawing.Size(70, 27);
             this.btn_Annuler.TabIndex = 1;
@@ -83,7 +83,7 @@
             // tb_NumEmp
             // 
             this.tb_NumEmp.Location = new System.Drawing.Point(120, 18);
-            this.tb_NumEmp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_NumEmp.Margin = new System.Windows.Forms.Padding(2);
             this.tb_NumEmp.Name = "tb_NumEmp";
             this.tb_NumEmp.Size = new System.Drawing.Size(76, 20);
             this.tb_NumEmp.TabIndex = 1;
@@ -92,7 +92,7 @@
             // tb_Echelon
             // 
             this.tb_Echelon.Location = new System.Drawing.Point(120, 120);
-            this.tb_Echelon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_Echelon.Margin = new System.Windows.Forms.Padding(2);
             this.tb_Echelon.Name = "tb_Echelon";
             this.tb_Echelon.Size = new System.Drawing.Size(76, 20);
             this.tb_Echelon.TabIndex = 5;
@@ -111,7 +111,7 @@
             // tb_Nom
             // 
             this.tb_Nom.Location = new System.Drawing.Point(120, 43);
-            this.tb_Nom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_Nom.Margin = new System.Windows.Forms.Padding(2);
             this.tb_Nom.Name = "tb_Nom";
             this.tb_Nom.Size = new System.Drawing.Size(76, 20);
             this.tb_Nom.TabIndex = 2;
@@ -130,7 +130,7 @@
             // tb_Prenom
             // 
             this.tb_Prenom.Location = new System.Drawing.Point(120, 68);
-            this.tb_Prenom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_Prenom.Margin = new System.Windows.Forms.Padding(2);
             this.tb_Prenom.Name = "tb_Prenom";
             this.tb_Prenom.Size = new System.Drawing.Size(76, 20);
             this.tb_Prenom.TabIndex = 3;
@@ -149,7 +149,7 @@
             // tb_Salaire
             // 
             this.tb_Salaire.Location = new System.Drawing.Point(120, 94);
-            this.tb_Salaire.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_Salaire.Margin = new System.Windows.Forms.Padding(2);
             this.tb_Salaire.Name = "tb_Salaire";
             this.tb_Salaire.Size = new System.Drawing.Size(76, 20);
             this.tb_Salaire.TabIndex = 4;
@@ -168,7 +168,7 @@
             // tb_Dep
             // 
             this.tb_Dep.Location = new System.Drawing.Point(120, 145);
-            this.tb_Dep.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_Dep.Margin = new System.Windows.Forms.Padding(2);
             this.tb_Dep.Name = "tb_Dep";
             this.tb_Dep.Size = new System.Drawing.Size(76, 20);
             this.tb_Dep.TabIndex = 6;
@@ -197,7 +197,7 @@
             // TB_Adresse
             // 
             this.TB_Adresse.Location = new System.Drawing.Point(120, 170);
-            this.TB_Adresse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_Adresse.Margin = new System.Windows.Forms.Padding(2);
             this.TB_Adresse.Name = "TB_Adresse";
             this.TB_Adresse.Size = new System.Drawing.Size(76, 20);
             this.TB_Adresse.TabIndex = 14;
@@ -228,7 +228,7 @@
             this.Controls.Add(this.btn_Annuler);
             this.Controls.Add(this.btn_Enregistrer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AjouterModifier";
             this.Text = "AjouterModifier";
             this.Load += new System.EventHandler(this.AjouterModifier_Load);
