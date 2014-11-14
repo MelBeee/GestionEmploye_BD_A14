@@ -8,11 +8,11 @@ delete from employes
 where empno = 20;  /-- properties.settings.default.Empno au lieu de 20
 
 /-- Commande pour afficher les departements et le nobmre d'employe dans chaque dans le datagridview de departement
-select e.codedep, d.nomdepartement ,to_char(count(e.codedep))
+select d.codedep, d.nomdepartement ,to_char(count(e.codedep))
 from employes e 
-inner join departements d on e.codedep = d.codedep 
-group by e.codedep, d.nomdepartement 
-order by e.codedep; 
+right join departements d on d.codedep = e.codedep 
+group by d.codedep, d.nomdepartement 
+order by d.codedep; 
 
 /-- Commande pour ajouter des employés dans la BD (Remplacer els données par les textbox.text)                          
 insert into employes VALUES(20,'Alain','Patoche',30000,1,'210 Troll, Blainville','200');  
