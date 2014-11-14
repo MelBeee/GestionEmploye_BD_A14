@@ -121,6 +121,7 @@ namespace TP2_Sql
         {
             Modifier();
             RemplirDataGridViewDepartement();
+            
         }
 
         private void btn_Supprimer_Click(object sender, EventArgs e)
@@ -172,6 +173,38 @@ namespace TP2_Sql
             dlg.Text = "Modification";
         }
 
+        void LoadData()
+        {
+            try
+            {
+                //Commande pour afficher un employe dans le form ajouter (dans les bonnes textbox)
+                string loadSQL = "select empno, nom, prenom, salaire, echelon, adresse, codedep " +
+                    "from employes where empno = " + Properties.Settings.Default.empno.ToString();  //-- properties.settings.default.Empno au lieu du 12
+                OracleCommand orcd = new OracleCommand(loadSQL, oraconn);
+                orcd.CommandType = CommandType.Text;
+                OracleDataReader oraRead = orcd.ExecuteReader();
+
+                if (oraRead.Read())
+                {
+                    Properties.Settings.Default.empno = oraRead.GetInt32(0);
+                    Properties.Settings.Default.nom = oraRead.GetString(1);
+                    Properties.Settings.Default.prenom = oraRead.GetString(2);
+                    Properties.Settings.Default.salaire = oraRead.GetFloat(3);
+                    Properties.Settings.Default.echelon = oraRead.GetInt32(4);
+                    Properties.Settings.Default.Adresse = oraRead.GetString(5);
+                    Properties.Settings.Default.codedep = oraRead.GetString(6);
+                }
+                else
+                {
+                    MessageBox.Show("Numéro d'employé invalide");
+                }
+            }
+            catch (OracleException ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+        }
+
         private void Supprimer()
         {
             if (EmpnoValide(TB_ModSup.Text))
@@ -192,11 +225,7 @@ namespace TP2_Sql
                          "inner join departements d on e.codedep = d.codedep " +
                          "group by e.codedep, d.nomdepartement " +
                          "order by e.codedep ";
-            // code nomdep numemp
 
-
-
-            //string sql = "select codedep, nomdepartement from departements"; 
             try
             {
                 DGV_Departement.Rows.Clear();

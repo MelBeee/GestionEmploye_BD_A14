@@ -82,5 +82,77 @@ namespace TP2_Sql.Properties {
                 this["empno"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string nom {
+            get {
+                return ((string)(this["nom"]));
+            }
+            set {
+                this["nom"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prenom {
+            get {
+                return ((string)(this["prenom"]));
+            }
+            set {
+                this["prenom"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public float salaire {
+            get {
+                return ((float)(this["salaire"]));
+            }
+            set {
+                this["salaire"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int echelon {
+            get {
+                return ((int)(this["echelon"]));
+            }
+            set {
+                this["echelon"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Adresse {
+            get {
+                return ((string)(this["Adresse"]));
+            }
+            set {
+                this["Adresse"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string codedep {
+            get {
+                return ((string)(this["codedep"]));
+            }
+            set {
+                this["codedep"] = value;
+            }
+        }
     }
 }
