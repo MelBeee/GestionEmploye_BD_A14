@@ -17,7 +17,6 @@ namespace TP2_Sql
         private OracleConnection oraconn = new OracleConnection();
         private DataSet monDataSet = new DataSet();
 
-
         public FormPrincipale()
         {
             InitializeComponent();
