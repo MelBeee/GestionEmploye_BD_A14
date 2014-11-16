@@ -39,8 +39,6 @@ namespace TP2_Sql
                 btn_Ajouter.Enabled = true;
                 btn_Rechercher.Enabled = true;
                 TB_ModSup.Enabled = true;
-                BTN_Precedant.Enabled = true;
-                BTN_Suivant.Enabled = true;
             }
         }
 
@@ -78,7 +76,8 @@ namespace TP2_Sql
                         pictureBox1.BackgroundImage = Properties.Resources.Deconnecter;
                         connection = false;
                     }
-                    RemplirDataGridViewDepartement();
+                    if(oraconn.State.ToString() == "Open")
+                        RemplirDataGridViewDepartement();
                 }
             }
             else
@@ -113,6 +112,8 @@ namespace TP2_Sql
                 sql = Properties.Settings.Default.CommandeSelect;
                 monDataSet.Clear();
                 RemplirLabels(sql);
+                BTN_Precedant.Enabled = true;
+                BTN_Suivant.Enabled = true;
             }
         }
 
@@ -133,7 +134,7 @@ namespace TP2_Sql
                 }
                 else
                 {
-                    MessageBox.Show("La table ne contient aucune information");
+                    MessageBox.Show("La table ne contient aucune valeur de ce type");
                     ReinitialiseLabel();
                 }
 
@@ -376,7 +377,7 @@ namespace TP2_Sql
 
         private void BTN_Suivant_Click(object sender, EventArgs e)
         {
-            this.BindingContext[monDataSet, "Employes"].Position += 1;
+            this.BindingContext[monDataSet, "Employes"].Position += 1;  
         }
 
         private string SwitchException(OracleException ex)
@@ -385,35 +386,29 @@ namespace TP2_Sql
 
             switch (ex.Number)
             {
-                case 2292: 
-                    MessageBox.Show("Une erreur non-gerer est survenue : " + ex.Number.ToString() + ":" + ex.Message.ToString(), ex.Number.ToString());
-                    break;
-                case 20324:
-                    MessageBox.Show("Une erreur non-gerer est survenue : " + ex.Number.ToString() + ":" + ex.Message.ToString(), ex.Number.ToString());
-                    break;
-                case 20325:
-                    MessageBox.Show("Une erreur non-gerer est survenue : " + ex.Number.ToString() + ":" + ex.Message.ToString(), ex.Number.ToString());
+                case 2292:
+                    MessageBox.Show("Tentative de suppression d'une clé lié à une clé étrangère ", "Erreur 1407", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 case 1407:
-                    MessageBox.Show("Une erreur non-gerer est survenue : " + ex.Number.ToString() + ":" + ex.Message.ToString(), ex.Number.ToString());
+                    MessageBox.Show("Vous ne pouvez pas mettre a jour une colonne avec une valeur null", "Erreur 1407", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 case 1400:
-                    MessageBox.Show("Une erreur non-gerer est survenue : " + ex.Number.ToString() + ":" + ex.Message.ToString(), ex.Number.ToString());
+                    MessageBox.Show("Vous ne pouvez pas ajouter une colonne avec une valeur null", "Erreur 1400", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 case 1:
-                    MessageBox.Show("Une erreur non-gerer est survenue : " + ex.Number.ToString() + ":" + ex.Message.ToString(), ex.Number.ToString());
+                    MessageBox.Show("Le numero d'employé doit être unique", "Erreur 1", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 case 1410:
-                    MessageBox.Show("Une erreur non-gerer est survenue : " + ex.Number.ToString() + ":" + ex.Message.ToString(), ex.Number.ToString());
+                    MessageBox.Show("Vous ne pouvez pas mettre de valeur null", "Erreur 1410", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 case 1017:
-                    MessageBox.Show("Une erreur non-gerer est survenue : " + ex.Number.ToString() + ":" + ex.Message.ToString(), ex.Number.ToString());
+                    MessageBox.Show("Mot de passe ou nom d'utilisateur invalide", "Erreur 1017", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 case 12170:
-                    MessageBox.Show("Une erreur non-gerer est survenue : " + ex.Number.ToString() + ":" + ex.Message.ToString(), ex.Number.ToString());
+                    MessageBox.Show("La base de données est indisponible,réessayer plus tard", "Erreur 12170", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 case 12543:
-                    MessageBox.Show("Une erreur non-gerer est survenue : " + ex.Number.ToString() + ":" + ex.Message.ToString(), ex.Number.ToString());
+                    MessageBox.Show("Connexion impossible,Vérifiez votre connection internet", "Erreur 12543", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 default:
                     MessageBox.Show("Une erreur non-gerer est survenue : " + ex.Number.ToString() + ":" + ex.Message.ToString(), ex.Number.ToString());
