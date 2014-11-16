@@ -132,6 +132,7 @@
             this.CB_Dep.Name = "CB_Dep";
             this.CB_Dep.Size = new System.Drawing.Size(121, 24);
             this.CB_Dep.TabIndex = 8;
+            this.CB_Dep.Text = "Ressources Humaines";
             this.CB_Dep.SelectedIndexChanged += new System.EventHandler(this.CB_Dep_SelectedIndexChanged);
             this.CB_Dep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CB_Dep_KeyPress);
             // 

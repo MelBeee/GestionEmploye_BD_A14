@@ -74,7 +74,7 @@ namespace TP2_Sql
                     }
                     catch (Exception ex)
                     {
-                        LB_Connection.Text = ex.Message.ToString();
+                        MessageBox.Show(ex.Message.ToString());
                         pictureBox1.BackgroundImage = Properties.Resources.Deconnecter;
                         connection = false;
                     }
@@ -128,13 +128,13 @@ namespace TP2_Sql
                 dataAdapter.Fill(monDataSet, "Employes");
                 if(this.BindingContext[monDataSet, "Employes"].Count > 0)
                 {
-                    MessageBox.Show("blblbl");
                     GB_Employe.Text = "Employé (" + this.BindingContext[monDataSet, "Employes"].Count.ToString() + " résultats)";
                     InitLabels();                       
                 }
                 else
                 {
-                    MessageBox.Show("Erreur dans le remplissage des informations");
+                    MessageBox.Show("La table ne contient aucune information");
+                    ReinitialiseLabel();
                 }
 
             }
