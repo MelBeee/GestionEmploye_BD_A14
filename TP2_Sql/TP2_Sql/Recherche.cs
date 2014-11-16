@@ -41,7 +41,7 @@ namespace TP2_Sql
             else if (RBTN_Dep.Checked)
             {
                 BTN_Ok.Enabled = true;
-                Properties.Settings.Default.CommandeSelect = "select * from employe e inner join departement d on e.codedep = d.codedep where NomDepartement like '" + CB_Dep.Text + "'";
+                Properties.Settings.Default.CommandeSelect = "select * from employes e inner join departements d on e.codedep = d.codedep where NomDepartement like '" + CB_Dep.Text + "'";
             }
 
         }

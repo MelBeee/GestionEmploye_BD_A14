@@ -54,11 +54,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.DGV_Departement = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.LB_test = new System.Windows.Forms.Label();
             this.CodeDep = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomDep = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NbrEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GB_Employe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Departement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -66,7 +65,7 @@
             // 
             // btn_Ajouter
             // 
-            this.btn_Ajouter.Location = new System.Drawing.Point(67, 229);
+            this.btn_Ajouter.Location = new System.Drawing.Point(65, 190);
             this.btn_Ajouter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Ajouter.Name = "btn_Ajouter";
             this.btn_Ajouter.Size = new System.Drawing.Size(155, 33);
@@ -77,7 +76,7 @@
             // 
             // btn_Supprimer
             // 
-            this.btn_Supprimer.Location = new System.Drawing.Point(167, 315);
+            this.btn_Supprimer.Location = new System.Drawing.Point(165, 276);
             this.btn_Supprimer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Supprimer.Name = "btn_Supprimer";
             this.btn_Supprimer.Size = new System.Drawing.Size(99, 33);
@@ -88,7 +87,7 @@
             // 
             // btn_Modifier
             // 
-            this.btn_Modifier.Location = new System.Drawing.Point(167, 277);
+            this.btn_Modifier.Location = new System.Drawing.Point(165, 238);
             this.btn_Modifier.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Modifier.Name = "btn_Modifier";
             this.btn_Modifier.Size = new System.Drawing.Size(99, 33);
@@ -110,7 +109,7 @@
             // 
             // TB_ModSup
             // 
-            this.TB_ModSup.Location = new System.Drawing.Point(44, 314);
+            this.TB_ModSup.Location = new System.Drawing.Point(42, 275);
             this.TB_ModSup.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TB_ModSup.MaxLength = 6;
             this.TB_ModSup.Name = "TB_ModSup";
@@ -121,7 +120,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 288);
+            this.label1.Location = new System.Drawing.Point(30, 249);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(127, 17);
             this.label1.TabIndex = 9;
@@ -130,7 +129,7 @@
             // LB_Connection
             // 
             this.LB_Connection.AutoSize = true;
-            this.LB_Connection.Location = new System.Drawing.Point(89, 35);
+            this.LB_Connection.Location = new System.Drawing.Point(71, 26);
             this.LB_Connection.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LB_Connection.Name = "LB_Connection";
             this.LB_Connection.Size = new System.Drawing.Size(51, 17);
@@ -140,7 +139,7 @@
             // BTN_Suivant
             // 
             this.BTN_Suivant.Location = new System.Drawing.Point(479, 402);
-            this.BTN_Suivant.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTN_Suivant.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_Suivant.Name = "BTN_Suivant";
             this.BTN_Suivant.Size = new System.Drawing.Size(100, 28);
             this.BTN_Suivant.TabIndex = 12;
@@ -151,7 +150,7 @@
             // BTN_Precedant
             // 
             this.BTN_Precedant.Location = new System.Drawing.Point(371, 402);
-            this.BTN_Precedant.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTN_Precedant.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_Precedant.Name = "BTN_Precedant";
             this.BTN_Precedant.Size = new System.Drawing.Size(100, 28);
             this.BTN_Precedant.TabIndex = 11;
@@ -352,29 +351,6 @@
             this.DGV_Departement.Size = new System.Drawing.Size(334, 112);
             this.DGV_Departement.TabIndex = 14;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::TP2_Sql.Properties.Resources.Deconnecter;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(30, 20);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(51, 47);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // LB_test
-            // 
-            this.LB_test.AutoSize = true;
-            this.LB_test.Location = new System.Drawing.Point(66, 150);
-            this.LB_test.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LB_test.Name = "LB_test";
-            this.LB_test.Size = new System.Drawing.Size(46, 17);
-            this.LB_test.TabIndex = 15;
-            this.LB_test.Text = "label9";
-            // 
             // CodeDep
             // 
             this.CodeDep.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -405,13 +381,25 @@
             this.NbrEmp.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.NbrEmp.Width = 70;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::TP2_Sql.Properties.Resources.Deconnecter;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(51, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // FormPrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(237)))), ((int)(((byte)(137)))));
             this.ClientSize = new System.Drawing.Size(653, 453);
-            this.Controls.Add(this.LB_test);
             this.Controls.Add(this.DGV_Departement);
             this.Controls.Add(this.GB_Employe);
             this.Controls.Add(this.BTN_Precedant);
@@ -467,7 +455,6 @@
         private System.Windows.Forms.Label LB_Salaire;
         private System.Windows.Forms.Label LB_Echelon;
         private System.Windows.Forms.Label LB_Nom;
-        private System.Windows.Forms.Label LB_test;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodeDep;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomDep;
         private System.Windows.Forms.DataGridViewTextBoxColumn NbrEmp;

@@ -109,11 +109,23 @@ namespace TP2_Sql
 
             if (dlg.ShowDialog() == DialogResult.OK)
             {
+                ReinitialiseLabel(); 
                 sql = Properties.Settings.Default.CommandeSelect;
                 LB_test.Text = sql.ToString();
                 monDataSet.Clear();
                 RemplirLabels(sql);
             }
+        }
+
+        public void ReinitialiseLabel()
+        {
+            LB_Numemp.DataBindings.Clear();
+            LB_Nom.DataBindings.Clear();
+            LB_Prenom.DataBindings.Clear();
+            LB_Adresse.DataBindings.Clear();
+            LB_Echelon.DataBindings.Clear();
+            LB_Dep.DataBindings.Clear();
+            LB_Salaire.DataBindings.Clear();
         }
 
         public void RemplirLabels(string sql)
