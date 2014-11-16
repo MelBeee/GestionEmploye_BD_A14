@@ -116,17 +116,6 @@ namespace TP2_Sql
             }
         }
 
-        public void ReinitialiseLabel()
-        {
-            LB_Numemp.DataBindings.Clear();
-            LB_Nom.DataBindings.Clear();
-            LB_Prenom.DataBindings.Clear();
-            LB_Adresse.DataBindings.Clear();
-            LB_Echelon.DataBindings.Clear();
-            LB_Dep.DataBindings.Clear();
-            LB_Salaire.DataBindings.Clear();
-        }
-
         public void RemplirLabels(string sql)
         {
             try
@@ -139,6 +128,7 @@ namespace TP2_Sql
                 dataAdapter.Fill(monDataSet, "Employes");
                 if(this.BindingContext[monDataSet, "Employes"].Count > 0)
                 {
+                    MessageBox.Show("blblbl");
                     GB_Employe.Text = "Employé (" + this.BindingContext[monDataSet, "Employes"].Count.ToString() + " résultats)";
                     InitLabels();                       
                 }
@@ -163,6 +153,17 @@ namespace TP2_Sql
             LB_Echelon.DataBindings.Add("Text", monDataSet, "Employes.Echelon");
             LB_Dep.DataBindings.Add("Text", monDataSet, "Employes.CodeDep");
             LB_Salaire.DataBindings.Add("Text", monDataSet, "Employes.Salaire");
+        }
+
+        public void ReinitialiseLabel()
+        {
+            LB_Numemp.DataBindings.Clear();
+            LB_Nom.DataBindings.Clear();
+            LB_Prenom.DataBindings.Clear();
+            LB_Adresse.DataBindings.Clear();
+            LB_Echelon.DataBindings.Clear();
+            LB_Dep.DataBindings.Clear();
+            LB_Salaire.DataBindings.Clear();
         }
 
         private void btn_Ajouter_Click(object sender, EventArgs e)
