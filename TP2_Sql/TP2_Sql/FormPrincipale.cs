@@ -273,6 +273,7 @@ namespace TP2_Sql
             }
 
             dlg.Text = "Modification";
+            Properties.Settings.Default.empno = -1;
         }
 
         void LoadData()
