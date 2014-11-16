@@ -28,20 +28,20 @@ namespace TP2_Sql
             if (RBTN_Tout.Checked)
             {
                 BTN_Ok.Enabled = true;
-                Properties.Settings.Default.CommandeSelect = "";
+                Properties.Settings.Default.CommandeSelect = "select * from employes";
             }
             else if (RBTN_Nom.Checked)
             {
                 if (TB_Nom.Text != "")
                 {
                     BTN_Ok.Enabled = true;
-                    Properties.Settings.Default.CommandeSelect = "where nom like '" + TB_Nom.Text + "%'";
+                    Properties.Settings.Default.CommandeSelect = "select * from employes where nom like '" + TB_Nom.Text + "%'";
                 }
             }
             else if (RBTN_Dep.Checked)
             {
                 BTN_Ok.Enabled = true;
-                Properties.Settings.Default.CommandeSelect = "where departement = " + CB_Dep.Text;
+                Properties.Settings.Default.CommandeSelect = "select * from employe e inner join departement d on e.codedep = d.codedep where NomDepartement like '" + CB_Dep.Text + "'";
             }
 
         }
