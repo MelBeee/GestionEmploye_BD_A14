@@ -111,7 +111,6 @@ namespace TP2_Sql
             {
                 ReinitialiseLabel(); 
                 sql = Properties.Settings.Default.CommandeSelect;
-                LB_test.Text = sql.ToString();
                 monDataSet.Clear();
                 RemplirLabels(sql);
             }
@@ -177,7 +176,14 @@ namespace TP2_Sql
         {
             Modifier();
             RemplirDataGridViewDepartement();
-
+            TB_ModSup.Clear();
+            Properties.Settings.Default.empno = 0;
+            Properties.Settings.Default.nom = "";
+            Properties.Settings.Default.prenom = "";
+            Properties.Settings.Default.salaire = 25000;
+            Properties.Settings.Default.echelon = 1;
+            Properties.Settings.Default.Adresse = "";
+            Properties.Settings.Default.codedep = "";
         }
 
         private void btn_Supprimer_Click(object sender, EventArgs e)

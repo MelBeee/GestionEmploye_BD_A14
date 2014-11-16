@@ -101,13 +101,18 @@ namespace TP2_Sql
 
         private void AjouterModifier_Load(object sender, EventArgs e)
         {
-
+            //toolTip1.SetToolTip(this.button1, "My button1");
+            TP_Dep.SetToolTip(this.tb_Dep, "Entrez un code dep existant !");
+            TP_Echelon.SetToolTip(this.tb_Echelon, "Entrez un nombre positif !");
+            TP_NumEmp.SetToolTip(this.tb_NumEmp, "Entrez un numero non existant !");
+            TP_Salaire.SetToolTip(this.tb_Salaire, "Entre 25000 et 100000 !");
             if (Properties.Settings.Default.empno != -1) //Modif
             {
                 tb_Nom.Enabled = false;
                 tb_NumEmp.Enabled = false;
                 tb_Prenom.Enabled = false;
                 tb_Dep.Enabled = false;
+                this.Text = "Modification";
                 LoadData();
             }
             else //new
@@ -116,6 +121,7 @@ namespace TP2_Sql
                 tb_NumEmp.Enabled = true;
                 tb_Prenom.Enabled = true;
                 tb_Dep.Enabled = true;
+                this.Text = "Ajouter";
             }
             OkEnable();
         }
