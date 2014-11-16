@@ -178,7 +178,7 @@ namespace TP2_Sql
             Modifier();
             RemplirDataGridViewDepartement();
             TB_ModSup.Clear();
-            Properties.Settings.Default.empno = 0;
+            Properties.Settings.Default.empno = -1;
             Properties.Settings.Default.nom = "";
             Properties.Settings.Default.prenom = "";
             Properties.Settings.Default.salaire = 25000;
@@ -271,9 +271,7 @@ namespace TP2_Sql
                 Properties.Settings.Default.empno = -1;
                 TB_ModSup.Text = "";
             }
-
             dlg.Text = "Modification";
-            Properties.Settings.Default.empno = -1;
         }
 
         void LoadData()
