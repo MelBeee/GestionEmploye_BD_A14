@@ -72,9 +72,9 @@ namespace TP2_Sql
                         oraconn.Open();
                         LB_Connection.Text = oraconn.State.ToString();
                     }
-                    catch (Exception ex)
+                    catch (OracleException ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        SwitchException(ex);
                         pictureBox1.BackgroundImage = Properties.Resources.Deconnecter;
                         connection = false;
                     }
@@ -138,9 +138,9 @@ namespace TP2_Sql
                 }
 
             }
-            catch (Exception ex)
+            catch (OracleException ex)
             {
-                MessageBox.Show(ex.Message.ToString());
+                SwitchException(ex);
             }
         }
 
@@ -232,9 +232,9 @@ namespace TP2_Sql
                     orcd.CommandType = CommandType.Text;
                     orcd.ExecuteNonQuery();
                 }
-                catch (Exception ex)
+                catch (OracleException ex)
                 {
-                    MessageBox.Show(ex.Message.ToString());
+                     SwitchException(ex);
                 }
             }
         }
@@ -260,9 +260,9 @@ namespace TP2_Sql
                         orcd.CommandType = CommandType.Text;
                         orcd.ExecuteNonQuery();
                     }
-                    catch (Exception ex)
+                    catch (OracleException ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        SwitchException(ex);
                     }
                 }
             }
@@ -297,7 +297,7 @@ namespace TP2_Sql
             }
             catch (OracleException ex)
             {
-                MessageBox.Show(ex.Message.ToString());
+                SwitchException(ex);
             }
 
         }
@@ -313,9 +313,9 @@ namespace TP2_Sql
                     orcd.CommandType = CommandType.Text;
                     orcd.ExecuteNonQuery();
                 }
-                catch (Exception ex)
+                catch (OracleException ex)
                 {
-                    MessageBox.Show(ex.Message.ToString());
+                    SwitchException(ex);
                 }
                 TB_ModSup.Clear();
             }
@@ -347,9 +347,9 @@ namespace TP2_Sql
                 }
                 oraRead.Close();
             }
-            catch (Exception ex)
+            catch (OracleException ex)
             {
-                MessageBox.Show(ex.Message.ToString());
+                SwitchException(ex);
             }
         }
 
@@ -377,6 +377,50 @@ namespace TP2_Sql
         private void BTN_Suivant_Click(object sender, EventArgs e)
         {
             this.BindingContext[monDataSet, "Employes"].Position += 1;
+        }
+
+        private string SwitchException(OracleException ex)
+        {
+            string msgException = "";
+
+            switch (ex.Number)
+            {
+                case 2292: 
+                    MessageBox.Show("Une erreur non-gerer est survenue : " + ex.Number.ToString() + ":" + ex.Message.ToString(), ex.Number.ToString());
+                    break;
+                case 20324:
+                    MessageBox.Show("Une erreur non-gerer est survenue : " + ex.Number.ToString() + ":" + ex.Message.ToString(), ex.Number.ToString());
+                    break;
+                case 20325:
+                    MessageBox.Show("Une erreur non-gerer est survenue : " + ex.Number.ToString() + ":" + ex.Message.ToString(), ex.Number.ToString());
+                    break;
+                case 1407:
+                    MessageBox.Show("Une erreur non-gerer est survenue : " + ex.Number.ToString() + ":" + ex.Message.ToString(), ex.Number.ToString());
+                    break;
+                case 1400:
+                    MessageBox.Show("Une erreur non-gerer est survenue : " + ex.Number.ToString() + ":" + ex.Message.ToString(), ex.Number.ToString());
+                    break;
+                case 1:
+                    MessageBox.Show("Une erreur non-gerer est survenue : " + ex.Number.ToString() + ":" + ex.Message.ToString(), ex.Number.ToString());
+                    break;
+                case 1410:
+                    MessageBox.Show("Une erreur non-gerer est survenue : " + ex.Number.ToString() + ":" + ex.Message.ToString(), ex.Number.ToString());
+                    break;
+                case 1017:
+                    MessageBox.Show("Une erreur non-gerer est survenue : " + ex.Number.ToString() + ":" + ex.Message.ToString(), ex.Number.ToString());
+                    break;
+                case 12170:
+                    MessageBox.Show("Une erreur non-gerer est survenue : " + ex.Number.ToString() + ":" + ex.Message.ToString(), ex.Number.ToString());
+                    break;
+                case 12543:
+                    MessageBox.Show("Une erreur non-gerer est survenue : " + ex.Number.ToString() + ":" + ex.Message.ToString(), ex.Number.ToString());
+                    break;
+                default:
+                    MessageBox.Show("Une erreur non-gerer est survenue : " + ex.Number.ToString() + ":" + ex.Message.ToString(), ex.Number.ToString());
+                    break;
+            }
+
+            return msgException;
         }
     }
 }
