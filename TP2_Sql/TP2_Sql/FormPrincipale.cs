@@ -19,7 +19,7 @@ namespace TP2_Sql
 
         public FormPrincipale()
         {
-            InitializeComponent(); // comment inutilewaefawefaewf
+            InitializeComponent(); // comment inutilewaefawefaewfwafeweffawef
         }
 
         void updateButton()
