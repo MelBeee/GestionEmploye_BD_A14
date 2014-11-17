@@ -96,11 +96,6 @@ namespace TP2_Sql
             oraconn.Close();
         }
 
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_Rechercher_Click(object sender, EventArgs e)
         {
             string sql;
@@ -325,7 +320,7 @@ namespace TP2_Sql
         private void RemplirDataGridViewDepartement()
         {
             DGV_Departement.Rows.Clear();
-            string sql = "select d.codedep, d.nomdepartement " + ", count(e.codedep) " +
+            string sql = "select d.codedep, d.nomdepartement , count(e.codedep) " +
                          "from employes e " +
                          "right join departements d on e.codedep = d.codedep " +
                          "group by d.codedep, d.nomdepartement " +
@@ -411,7 +406,7 @@ namespace TP2_Sql
                     MessageBox.Show("Connexion impossible,Vérifiez votre connection internet", "Erreur 12543", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 default:
-                    MessageBox.Show("Une erreur non-gerée est survenue : " + ex.Number.ToString() + ":" + ex.Message.ToString(), ex.Number.ToString());
+                    MessageBox.Show("Une erreur non-gerée est survenue : " + ex.Number.ToString() + ":" + ex.Message.ToString(), ex.Number.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
             }
 
